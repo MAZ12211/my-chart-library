@@ -2,11 +2,11 @@
   "title": "My Chart Library",
   "description": "A Collection of my old and new charts in one place.",
   "api_version": "0.7.3",
-  "mod_version": "1.0.0",
+  "mod_version": "1.1.0",
   "contributors": [
     {"name": "MAZ12211", "role": "Coded and Charted everything + did minor things"},
     {"name": "V-Slice Network", "role": "Code help", "url": "https://discord.gg/83tbbcZ3uT"},
-	{"name": "AbnormalPoof", "role": "Made the play video event", "url": "https://gamebanana.com/members/2636200"}
+	  {"name": "AbnormalPoof", "role": "Made the play video event", "url": "https://gamebanana.com/members/2636200"}
   ],
   "optionalDependencies": {
     "extra-song-credits": ">=1.0.2",
