@@ -1,0 +1,36 @@
+{
+	"timeFormat": "ms",
+	"artist": "Seberster",
+	"charter": "MAZ",
+	"offsets": {
+		"altInstrumentals": {},
+		"instrumental": -40.7,
+		"vocals": {}
+	},
+	"playData": {
+		"ratings": {"hard": 11},
+		"album": "fnf-retaken-sanity",
+		"stage": "veryEmptyStage",
+		"songVariations": [],
+		"noteStyle": "funkin",
+		"difficulties": [
+			"hard"
+		],
+		"characters": {
+			"girlfriend": "",
+			"opponent": "",
+			"player": "bf"
+		}
+	},
+	"songName": "FNF Silent Hills Retaken Sanity",
+	"timeChanges": [
+		{
+			"d": 4,
+			"n": 4,
+			"t": 0,
+			"bpm": 160
+		}
+	],
+	"generatedBy": "Moonchart 0.4.0",
+	"version": "2.2.2"
+}

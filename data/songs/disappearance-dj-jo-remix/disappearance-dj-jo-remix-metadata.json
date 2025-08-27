@@ -1,0 +1,42 @@
+{
+	"timeFormat": "ms",
+	"artist": "cosmo@bousouP",
+	"charter": "MAZ",
+	"offsets": {
+		"altInstrumentals": {},
+		"instrumental": -341,
+		"vocals": {}
+	},
+	"playData": {
+		"ratings": {"hard": 13},
+		"album": "the-disappearance-of-hatsune-miku-dj-jo-remix",
+		"stage": "veryEmptyStage",
+		"songVariations": [],
+		"noteStyle": "funkin",
+		"difficulties": [
+			"hard"
+		],
+		"characters": {
+			"girlfriend": "",
+			"opponent": "",
+			"player": "bf"
+		}
+	},
+	"songName": "Disappearance dj-Jo Remix",
+	"timeChanges": [
+		{
+			"d": 4,
+			"n": 4,
+			"t": 0,
+			"bpm": 160
+		},
+		{
+			"d": 4,
+			"n": 4,
+			"t": 25500,
+			"bpm": 270
+		}
+	],
+	"generatedBy": "Moonchart 0.4.0",
+	"version": "2.2.2"
+}

@@ -1,0 +1,180 @@
+import funkin.modding.events.ScriptEvent;
+import funkin.modding.module.Module;
+import funkin.play.PlayState;
+import funkin.play.scoring.Scoring;
+import funkin.modding.module.ModuleHandler;
+import funkin.graphics.FunkinCamera;
+import funkin.ui.freeplay.FreeplayState;
+import funkin.graphics.FunkinSprite;
+import funkin.audio.FunkinSound;
+import funkin.Paths;
+import flixel.util.FlxTimer;
+import funkin.Assets;
+
+import funkin.modding.PolymodErrorHandler;
+import funkin.modding.PolymodHandler;
+import funkin.Conductor;
+import funkin.graphics.video.FunkinVideoSprite;
+import funkin.play.Countdown;
+import funkin.data.event.SongEventRegistry;
+import funkin.data.song.SongEventDataRaw;
+import funkin.modding.events.SongEventScriptEvent;
+import funkin.Preferences;
+import haxe.Json;
+import flixel.FlxG;
+
+class CL_Handler extends Module {
+    public var jsonPath = Paths.json("chartLibraryList");
+    public var jsonData:Dynamic; // Shortcut for Json.parse(Assets.getText(jsonPath))
+
+    public var songsArray:Array = null;
+    public var bgImage:FunkinSprite = null;
+    public var defaultBG_maxVal:Int = 10; // min is 1 not 0
+    public var isSparrow:Bool = false;
+
+    public var funkinVidSprite = null;
+
+    function new() {
+        super("cl_handler");
+        if (Assets.exists(jsonPath)) {
+            jsonData = Json.parse(Assets.getText(jsonPath));
+            songsArray = jsonData.songs;
+        }
+    }
+
+    // override function onCreate(e) {
+    //     super.onCreate(e);
+
+    // }
+
+    override function onSongLoaded(e) {
+        super.onSongLoaded(e);
+
+        if (Assets.exists(jsonPath)) {
+            for (song in songsArray) {
+                if (song.songName == PlayState.instance.currentChart.songName || song.songName == PlayState.instance.currentSong.id) {
+                    if (PlayState.instance.opponentStrumline != null) PlayState.instance.opponentStrumline.visible = false;
+                    if (PlayState.instance.playerStrumline != null) PlayState.instance.playerStrumline.x = FlxG.width / 2 - PlayState.instance.playerStrumline.width / 2;
+                    if (PlayState.instance.comboPopUps != null) PlayState.instance.comboPopUps.offsets =  [400, 0];
+
+                    if (!PolymodHandler.loadedModIds.contains("[V-Slice] Play Video Event") || song.video == null) {
+                        var bgPath = "songs/" + PlayState.instance.currentSong.id + "/" + "bg";
+                        if (Assets.exists(Paths.file("images/songs/" + PlayState.instance.currentSong.id + "/" + 'bg.xml'))) {
+                            bgImage = new FunkinSprite().loadSparrow(bgPath);
+                            bgImage.animation.addByPrefix('idle', 'idle0', (song.bgAnimationFPS != null ? song.bgAnimationFPS : 10), true);
+                            isSparrow = true;
+                            if (Preferences.flashingLights && isSparrow) bgImage.animation?.play('idle');
+                        } else if (Assets.exists(Paths.image(bgPath))) {
+                            bgImage = new FunkinSprite().loadTexture(bgPath);
+                            isSparrow = false;
+                        } else {
+                            bgImage = new FunkinSprite().loadTexture(Paths.image("defaults/default_" + FlxG.random.int(1, defaultBG_maxVal)));
+                        }
+
+                        if (bgImage != null) {
+                            // I definitely borrow this code
+
+                            // Scales the background to fit the screen while keeping the aspect ratio.
+                            // Math.min is used to ensure that the background is not stretched in either direction.
+                            // For example, if the background is wider than the screen, use the screen width to scale the background.
+                            // If the background is taller than the screen, use the screen height to scale the background.
+                            var scale:Float = Math.min(FlxG.width / bgImage.width, FlxG.height / bgImage.height);
+                            // Set the graphic size of the background to the scaled size.
+                            // The reason we multiply the width and height here is because setGraphicSize expects the new width and height,
+                            // not the scale factor.
+                            // For example, if the original width is 100 and the scale is 2, we want to set the graphic size to 200, not 2.
+                            bgImage.setGraphicSize((bgImage.width * scale), bgImage.height * scale);
+                            // Update the hitbox of the background after resizing it.
+                            // - AI explanation because I couldn't understand the, I'm sure basic, math behind this
+                            bgImage.updateHitbox();
+
+                            bgImage.screenCenter();
+                            bgImage.scrollFactor.set(0, 0);
+                            bgImage.zIndex = 300;
+                            bgImage.cameras = [PlayState.instance.camGame];
+                            if (PlayState.instance.currentStage != null) PlayState.instance.currentStage.add(bgImage);
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+
+    override function onSongRetry(e) {
+        super.onSongRetry(e);
+        bgImage?.destroy(); // meant to fix a duplication bug
+    }
+
+    override function onSongStart(e) {
+        super.onSongStart(e);
+
+        if (Assets.exists(jsonPath)) {
+            for (song in songsArray) {
+                if (song.songName == PlayState.instance.currentChart.songName || song.songName == PlayState.instance.currentSong.id) {
+                    
+                    execEvent("SetCameraBop", {
+                        intensity: if (song.init_BeatIntensity != null) song.init_BeatIntensity, // dumb name, but better than beatIntensityOnStart or startingBeatIntensity imo. default is 1
+                        rate: if (song.init_BeatRate != null) song.init_BeatRate // default is 4 beats (camera bops every 4 beats)
+                    });
+
+                    if (song.video != null && PolymodHandler.loadedModIds.contains("[V-Slice] Play Video Event")) {
+                        funkinVidSprite = ModuleHandler.getModule("PVE_VideoModule").scriptCall("createVideo", [
+                        Paths.videos(song.video),
+                        {
+                            videoType: 1,
+                            disableControls: false,
+                            hudFadeDuration: 0, // Make this an option in the json file too?
+                            resync: true,
+                            zIndex: 500,
+                            mute: (song.muteVideo != null ? song.muteVideo : true),
+                            timestamp: Conductor.instance.songPosition
+                        }
+                        ]);
+                        funkinVidSprite.bitmap.onEndReached.add(function() {
+                            // Insert logic here I guess.
+                        });
+                    } else {
+                        trace("Play Video Event mod is disabled, broken, or not found.");
+                    }
+                }
+
+            }
+        }
+    }
+
+    override function onCountdownStart(e) {
+        if (Assets.exists(jsonPath)) {
+            for (song in songsArray) {
+                if (song.songName == PlayState.instance.currentChart.songName || song.songName == PlayState.instance.currentSong.id) {
+                    // Skip the countdown if it's true or it's empty/not included in the json file
+                    if (song.skipCountDown != null && song.skipCountDown) {
+                        new FlxTimer().start(0.00000000000001, timer -> {
+                        Countdown.skipCountdown();
+                    });
+                    }
+                }
+            }
+        }
+    }
+
+    /**
+    * Triggers a song event. (credits to cyn0x8 on github.com)
+    * 
+    * @param kind The event kind.
+    * @param value The event data.
+    */
+    public function execEvent(kind:String, ?value:Dynamic):Void {
+            if (PlayState.instance == null || Conductor.get_instance() == null) {
+                    return;
+            }
+
+            var event:SongEventDataRaw = new SongEventDataRaw(PlayState.instance.songPosition, kind, value);
+            var scriptEvent:SongEventScriptEvent = new SongEventScriptEvent(event);
+            if (!scriptEvent.eventCanceled) {
+                    SongEventRegistry.handleEvent(event);
+            }
+
+            PlayState.instance.dispatchEvent(scriptEvent);
+    }
+}

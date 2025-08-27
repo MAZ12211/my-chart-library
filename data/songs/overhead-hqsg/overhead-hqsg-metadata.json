@@ -1,0 +1,36 @@
+{
+	"timeFormat": "ms",
+	"artist": "Sock.Clip",
+	"charter": "MAZ",
+	"offsets": {
+		"altInstrumentals": {},
+		"instrumental": -66,
+		"vocals": {}
+	},
+	"playData": {
+		"ratings": {"hard": 6},
+		"album": "siIvaGunner-highest-quality-rips-volume-d",
+		"stage": "veryEmptyStage",
+		"songVariations": [],
+		"noteStyle": "funkin",
+		"difficulties": [
+			"hard"
+		],
+		"characters": {
+			"girlfriend": "",
+			"opponent": "",
+			"player": "bf"
+		}
+	},
+	"songName": "Overhead HQSG",
+	"timeChanges": [
+		{
+			"d": 4,
+			"n": 4,
+			"t": 0,
+			"bpm": 180.491
+		}
+	],
+	"generatedBy": "Moonchart 0.4.0",
+	"version": "2.2.2"
+}

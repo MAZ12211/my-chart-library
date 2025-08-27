@@ -1,0 +1,8 @@
+{
+  "version": "1.0.0",
+  "name": "FNF RETAKEN SANITY",
+  "artists": ["Seberster"],
+  "albumArtAsset": "freeplay/albumRoll/fnf-silent-hills-retaken-sanity",
+  "albumTitleAsset": "freeplay/albumRoll/fnf-silent-hills-retaken-sanity-text",
+  "albumTitleOffsets": [30, 0]
+}

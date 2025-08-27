@@ -1,0 +1,37 @@
+{
+	"timeFormat": "ms",
+	"artist": "The_Mayz",
+	"charter": "MAZ",
+	"offsets": {
+		"altInstrumentals": {},
+		"instrumental": -127,
+		"vocals": {}
+	},
+	"playData": {
+		"ratings": {"hard": 10, "normal": 7},
+		"album": "unknown",
+		"stage": "veryEmptyStage",
+		"songVariations": [],
+		"noteStyle": "funkin",
+		"difficulties": [
+			"hard",
+			"normal"
+		],
+		"characters": {
+			"girlfriend": "",
+			"opponent": "",
+			"player": "bf"
+		}
+	},
+	"songName": "Really Happy Sergrix Remix",
+	"timeChanges": [
+		{
+			"d": 4,
+			"n": 4,
+			"t": 0,
+			"bpm": 140
+		}
+	],
+	"generatedBy": "Moonchart 0.4.0",
+	"version": "2.2.2"
+}

@@ -1,0 +1,51 @@
+import flixel.FlxG;
+import flixel.FlxSprite;
+import funkin.play.stage.Stage;
+import funkin.play.PlayState;
+import flixel.addons.display.FlxBackdrop;
+
+class drBattleStage extends Stage {
+    function new() {
+        super('dr-battle');
+    }
+    var checker:FlxBackdrop;
+    var checker2:FlxBackdrop;
+
+    function buildStage(){
+        super.buildStage();
+
+        checker2 = new FlxBackdrop(Paths.image('innersquare'));
+        checker2.moves = true;
+        checker2.velocity.x = 50; // you can adjust the values to make the scrolling faster or lower
+        checker2.velocity.y = 50;
+        checker2.active = true;
+        checker2.updateHitbox();
+        checker2.scrollFactor.set(0, 0);
+        checker2.zIndex = 100;
+        checker2.alpha = 0.7;
+        // checker2.screenCenter(X); 
+        PlayState.instance.currentStage.add(checker2);
+
+        checker = new FlxBackdrop(Paths.image('outersquare'));
+        checker.moves = true;
+        checker.velocity.x = -50; // you can adjust the values to make the scrolling faster or lower
+        checker.velocity.y = -70;
+        checker.active = true;
+        checker.updateHitbox();
+        checker.scrollFactor.set(0, 0);
+        checker.zIndex = 150;
+        // checker.alpha = 1; 
+        // checker.screenCenter(X); 
+        PlayState.instance.currentStage.add(checker);
+        PlayState.instance.currentStage.refresh();
+
+    }
+
+    function fetchAssetPaths():Array<String>{
+        var results:Array<String> = super.fetchAssetPaths();
+        results.push(Paths.image('outersquare'));
+        results.push(Paths.image('innersquare'));
+
+        return results;
+    }
+}

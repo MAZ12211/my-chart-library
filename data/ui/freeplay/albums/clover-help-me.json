@@ -1,0 +1,8 @@
+{
+  "version": "1.0.0",
+  "name": "CLOVER HELP ME",
+  "artists": ["OR3O"],
+  "albumArtAsset": "freeplay/albumRoll/clover-help-me",
+  "albumTitleAsset": "freeplay/albumRoll/clover-text",
+  "albumTitleOffsets": [35, 0]
+}

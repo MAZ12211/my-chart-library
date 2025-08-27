@@ -1,0 +1,38 @@
+{
+	"timeFormat": "ms",
+	"artist": "Funkin Sound Project",
+	"charter": "MAZ",
+	"offsets": {
+		"altInstrumentals": {},
+		"instrumental": 0,
+		"vocals": {}
+	},
+	"playData": {
+		"ratings": {"easy": 4, "normal": 6, "hard": 7},
+		"stage": "veryEmptyStage",
+		"songVariations": [],
+		"noteStyle": "funkin",
+		"difficulties": [
+			"hard",
+			"normal",
+			"easy"
+		],
+		"characters": {
+			"girlfriend": "",
+			"opponent": "pico",
+			"player": "bf"
+		},
+		"album": "funkin-sound-project4"
+	},
+	"songName": "Credits",
+	"timeChanges": [
+		{
+			"d": 4,
+			"n": 4,
+			"t": 0,
+			"bpm": 120
+		}
+	],
+	"generatedBy": "Moonchart 0.4.0 & by hand",
+	"version": "2.2.2"
+}

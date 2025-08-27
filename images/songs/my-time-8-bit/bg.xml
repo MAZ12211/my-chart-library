@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.3 https://neeeoo.github.io/funkin-packer/
+-->
+<TextureAtlas imagePath="bg.png" width="4284" height="482">
+	<SubTexture name="idle0001" x="1715" y="1" width="854" height="480" frameX="-0" frameY="-0" frameWidth="854" frameHeight="480"/>
+	<SubTexture name="idle0002" x="2572" y="1" width="854" height="480" frameX="-0" frameY="-0" frameWidth="854" frameHeight="480"/>
+	<SubTexture name="idle0003" x="3429" y="1" width="854" height="480" frameX="-0" frameY="-0" frameWidth="854" frameHeight="480"/>
+	<SubTexture name="idle0004" x="1" y="1" width="854" height="480" frameX="-0" frameY="-0" frameWidth="854" frameHeight="480"/>
+	<SubTexture name="idle0005" x="858" y="1" width="854" height="480" frameX="-0" frameY="-0" frameWidth="854" frameHeight="480"/>
+</TextureAtlas>

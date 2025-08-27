@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.3 https://neeeoo.github.io/funkin-packer/
+-->
+<TextureAtlas imagePath="versus-omori-ost-text.png" width="589" height="114">
+	<SubTexture name="switch0001" x="296" y="1" width="292" height="112" frameX="-7" frameY="-1" frameWidth="300" frameHeight="117"/>
+	<SubTexture name="switch0002" x="296" y="1" width="292" height="112" frameX="-7" frameY="-1" frameWidth="300" frameHeight="117"/>
+	<SubTexture name="switch0003" x="296" y="1" width="292" height="112" frameX="-7" frameY="-1" frameWidth="300" frameHeight="117"/>
+	<SubTexture name="switch0004" x="296" y="1" width="292" height="112" frameX="-7" frameY="-1" frameWidth="300" frameHeight="117"/>
+	<SubTexture name="idle0001" x="1" y="1" width="292" height="112" frameX="-7" frameY="-1" frameWidth="300" frameHeight="117"/>
+	<SubTexture name="idle0002" x="1" y="1" width="292" height="112" frameX="-7" frameY="-1" frameWidth="300" frameHeight="117"/>
+	<SubTexture name="idle0003" x="1" y="1" width="292" height="112" frameX="-7" frameY="-1" frameWidth="300" frameHeight="117"/>
+	<SubTexture name="idle0004" x="1" y="1" width="292" height="112" frameX="-7" frameY="-1" frameWidth="300" frameHeight="117"/>
+	<SubTexture name="idle0005" x="1" y="1" width="292" height="112" frameX="-7" frameY="-1" frameWidth="300" frameHeight="117"/>
+	<SubTexture name="idle0006" x="1" y="1" width="292" height="112" frameX="-7" frameY="-1" frameWidth="300" frameHeight="117"/>
+	<SubTexture name="idle0007" x="1" y="1" width="292" height="112" frameX="-7" frameY="-1" frameWidth="300" frameHeight="117"/>
+	<SubTexture name="idle0008" x="1" y="1" width="292" height="112" frameX="-7" frameY="-1" frameWidth="300" frameHeight="117"/>
+</TextureAtlas>

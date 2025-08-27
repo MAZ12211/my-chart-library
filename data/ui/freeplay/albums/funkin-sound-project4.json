@@ -1,0 +1,8 @@
+{
+  "version": "1.0.0",
+  "name": "Funkin' Sound Project Vol. 4",
+  "artists": ["Multiple"],
+  "albumArtAsset": "freeplay/albumRoll/funkin-sound-project4",
+  "albumTitleAsset": "freeplay/albumRoll/funkin-sound-project4-text",
+  "albumTitleOffsets": [-40, 0]
+}

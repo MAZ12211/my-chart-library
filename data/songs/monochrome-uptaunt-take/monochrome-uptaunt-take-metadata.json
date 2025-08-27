@@ -1,0 +1,36 @@
+{
+	"timeFormat": "ms",
+	"artist": "Adam McHummus (now as Madame McHummus)",
+	"charter": "MAZ",
+	"offsets": {
+		"altInstrumentals": {},
+		"instrumental": -375,
+		"vocals": {}
+	},
+	"playData": {
+		"ratings": {"hard": 8},
+		"album": "unknown",
+		"stage": "veryEmptyStage",
+		"songVariations": [],
+		"noteStyle": "funkin",
+		"difficulties": [
+			"hard"
+		],
+		"characters": {
+			"girlfriend": "",
+			"opponent": "",
+			"player": "bf"
+		}
+	},
+	"songName": "Monochrome Uptaunt Take",
+	"timeChanges": [
+		{
+			"d": 4,
+			"n": 4,
+			"t": 0,
+			"bpm": 160
+		}
+	],
+	"generatedBy": "Moonchart 0.4.0",
+	"version": "2.2.2"
+}

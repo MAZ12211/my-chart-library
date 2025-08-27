@@ -1,0 +1,36 @@
+{
+	"timeFormat": "ms",
+	"artist": "Pedro Silva",
+	"charter": "MAZ",
+	"offsets": {
+		"altInstrumentals": {},
+		"instrumental": -192,
+		"vocals": {}
+	},
+	"playData": {
+		"ratings": {"hard": 10},
+		"album": "unknown",
+		"stage": "veryEmptyStage",
+		"songVariations": [],
+		"noteStyle": "funkin",
+		"difficulties": [
+			"hard"
+		],
+		"characters": {
+			"girlfriend": "",
+			"opponent": "",
+			"player": "bf"
+		}
+	},
+	"songName": "It Means Everything Lofi hiphop chillhop Remix",
+	"timeChanges": [
+		{
+			"d": 4,
+			"n": 4,
+			"t": 0,
+			"bpm": 171.462
+		}
+	],
+	"generatedBy": "Moonchart 0.4.0",
+	"version": "2.2.2"
+}

@@ -1,0 +1,36 @@
+{
+	"timeFormat": "ms",
+	"artist": "Coalmunist/Stahl",
+	"charter": "MAZ",
+	"offsets": {
+		"altInstrumentals": {},
+		"instrumental": -72,
+		"vocals": {}
+	},
+	"playData": {
+		"ratings": {"hard": 11},
+		"album": "versus-omori-blackspace-bossrush-ost",
+		"stage": "veryEmptyStage",
+		"songVariations": [],
+		"noteStyle": "funkin",
+		"difficulties": [
+			"hard"
+		],
+		"characters": {
+			"girlfriend": "",
+			"opponent": "",
+			"player": "bf"
+		}
+	},
+	"songName": "Blackspace Bossrush Sanguine",
+	"timeChanges": [
+		{
+			"d": 4,
+			"n": 4,
+			"t": 0,
+			"bpm": 182
+		}
+	],
+	"generatedBy": "Moonchart 0.4.0",
+	"version": "2.2.2"
+}

@@ -1,0 +1,71 @@
+import funkin.play.PlayState;
+import funkin.play.song.Song;
+import funkin.graphics.FunkinSprite;
+import flixel.tweens.FlxTween;
+import flixel.FlxG;
+import funkin.Conductor;
+import funkin.modding.base.ScriptedFlxSpriteGroup;
+
+class CL_credits extends Song {
+    function new() {
+        super("credits");
+    }
+    var bf = null;
+    var dad = null;
+    var spec:ScriptedFlxSpriteGroup = null;
+
+    override function onSongLoaded(e) {
+        super.onSongLoaded(e);
+        bf = PlayState.instance.currentStage.getBoyfriend();
+        dad = PlayState.instance.currentStage.getDad();
+        bf.alpha = 0.0001;
+
+        dad.zIndex = 1000;
+        dad.screenCenter(0x11);
+        dad.y += 250;
+        dad.x = -dad.width - 200;
+        dad.alpha = 0.5;
+        PlayState.instance.currentStage.refresh();
+        
+    }
+
+    override function onCountdownStart(e) {
+        super.onCountdownStart(e);
+        spec = ScriptedFlxSpriteGroup.init('WaveformObject', FlxG.sound.music);
+        spec.createWaveForm(70, 10, 9, 1, 0xFFFFFFFF);
+        spec.screenCenter(0x01);
+        spec.y = FlxG.height * 0.7;
+        spec.scrollFactor.set(0, 0);
+        spec.cameras = [PlayState.instance.camHUD];
+
+        if (PlayState.instance.playerStrumlin != null) {
+            PlayState.instance.insert(PlayState.instance.members.indexOf(PlayState.instance.playerStrumline) - 1, spec);
+        }
+    }
+
+    override function onBeatHit(e) {
+        super.onBeatHit(e);
+        switch (e.beat) {
+            case 48: FlxTween.tween(dad, {x: FlxG.width + 300}, 10);
+            case 64:
+                dad.flipX = false;
+                FlxTween.tween(dad, {x: -dad.width - 700}, 10);
+            case 144:
+                dad.flipX = true;
+                FlxTween.tween(dad, {x: FlxG.width + 300}, 10);
+            case 160:
+                dad.flipX = false;
+                FlxTween.tween(dad, {x: -dad.width - 700}, 10);
+        }
+    }
+    override function onSongStart(event:ScriptEvent){
+        super.onSongStart(event);
+        spec.snd = FlxG.sound.music;
+        spec.initAnalyzer();
+    }
+
+    override function onSongEnd(event:ScriptEvent){
+        super.onSongEnd(event);
+        spec.dumpSound();
+    }
+}

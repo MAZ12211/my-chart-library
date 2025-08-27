@@ -1,0 +1,42 @@
+{
+	"timeFormat": "ms",
+	"artist": "OR3O",
+	"charter": "MAZ",
+	"offsets": {
+		"altInstrumentals": {},
+		"instrumental": -331,
+		"vocals": {}
+	},
+	"playData": {
+		"ratings": {"hard": 10},
+		"album": "clover-living-on",
+		"stage": "veryEmptyStage",
+		"songVariations": [],
+		"noteStyle": "funkin",
+		"difficulties": [
+			"hard"
+		],
+		"characters": {
+			"girlfriend": "",
+			"opponent": "",
+			"player": "bf"
+		}
+	},
+	"songName": "Living On",
+	"timeChanges": [
+		{
+			"d": 4,
+			"n": 4,
+			"t": 0,
+			"bpm": 125.124
+		},
+		{
+			"d": 4,
+			"n": 4,
+			"t": 164956.363287619,
+			"bpm": 144
+		}
+	],
+	"generatedBy": "Moonchart 0.4.0",
+	"version": "2.2.2"
+}

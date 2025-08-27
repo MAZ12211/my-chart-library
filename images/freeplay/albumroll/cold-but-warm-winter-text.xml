@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.3 https://neeeoo.github.io/funkin-packer/
+-->
+<TextureAtlas imagePath="cold-but-warm-winter-text.png" width="499" height="124">
+	<SubTexture name="switch0001" x="251" y="1" width="247" height="122" frameX="-0" frameY="-0" frameWidth="247" frameHeight="122"/>
+	<SubTexture name="switch0002" x="251" y="1" width="247" height="122" frameX="-0" frameY="-0" frameWidth="247" frameHeight="122"/>
+	<SubTexture name="switch0003" x="251" y="1" width="247" height="122" frameX="-0" frameY="-0" frameWidth="247" frameHeight="122"/>
+	<SubTexture name="switch0004" x="251" y="1" width="247" height="122" frameX="-0" frameY="-0" frameWidth="247" frameHeight="122"/>
+	<SubTexture name="idle0001" x="1" y="1" width="247" height="122" frameX="-0" frameY="-0" frameWidth="247" frameHeight="122"/>
+	<SubTexture name="idle0002" x="1" y="1" width="247" height="122" frameX="-0" frameY="-0" frameWidth="247" frameHeight="122"/>
+	<SubTexture name="idle0003" x="1" y="1" width="247" height="122" frameX="-0" frameY="-0" frameWidth="247" frameHeight="122"/>
+	<SubTexture name="idle0004" x="1" y="1" width="247" height="122" frameX="-0" frameY="-0" frameWidth="247" frameHeight="122"/>
+	<SubTexture name="idle0005" x="1" y="1" width="247" height="122" frameX="-0" frameY="-0" frameWidth="247" frameHeight="122"/>
+	<SubTexture name="idle0006" x="1" y="1" width="247" height="122" frameX="-0" frameY="-0" frameWidth="247" frameHeight="122"/>
+	<SubTexture name="idle0007" x="1" y="1" width="247" height="122" frameX="-0" frameY="-0" frameWidth="247" frameHeight="122"/>
+	<SubTexture name="idle0008" x="1" y="1" width="247" height="122" frameX="-0" frameY="-0" frameWidth="247" frameHeight="122"/>
+</TextureAtlas>

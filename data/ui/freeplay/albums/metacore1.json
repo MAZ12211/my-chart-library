@@ -1,0 +1,8 @@
+{
+  "version": "1.0.0",
+  "name": "METACORE VOL. 1",
+  "artists": ["metacore"],
+  "albumArtAsset": "freeplay/albumRoll/metacore1",
+  "albumTitleAsset": "freeplay/albumRoll/metacore1-text",
+  "albumTitleOffsets": [-10, 0]
+}

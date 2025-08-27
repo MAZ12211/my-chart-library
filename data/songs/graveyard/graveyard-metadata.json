@@ -1,0 +1,31 @@
+{
+    "timeFormat": "ms",
+    "artist": "Oliver Buckland",
+    "charter": "MAZ",
+    "offsets": {
+        "altInstrumentals": {},
+        "instrumental": 0,
+        "vocals": {}
+    },
+    "playData": {
+      "stage": "veryEmptyStage",
+      "songVariations": [],
+      "noteStyle": "funkin",
+      "difficulties": ["easy", "normal", "hard"],
+      "characters": {
+        "girlfriend": "",
+        "opponent": "",
+        "player": "bf"
+      },
+      "ratings": { "easy": 5, "normal": 7, "hard": 8 },
+      "album": "volume1",
+      "previewStart": 0,
+      "previewEnd": 15000
+    },
+    "songName": "Graveyard",
+    "timeChanges": [
+        {"d":4,"n":4,"t":0,"bpm":94.5}
+    ],
+    "generatedBy": "Moonchart 0.4.0",
+    "version": "2.2.2"
+}

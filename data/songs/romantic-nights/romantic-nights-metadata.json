@@ -1,0 +1,38 @@
+{
+	"timeFormat": "ms",
+	"artist": "SolarDTM",
+	"charter": "MAZ",
+	"offsets": {
+		"altInstrumentals": {},
+		"instrumental": 0,
+		"vocals": {}
+	},
+	"playData": {
+		"ratings": {"easy": 2, "normal": 4, "hard": 7},
+		"album": "unknown",
+		"stage": "veryEmptyStage",
+		"songVariations": [],
+		"noteStyle": "funkin",
+		"difficulties": [
+			"hard",
+			"normal",
+			"easy"
+		],
+		"characters": {
+			"girlfriend": "",
+			"opponent": "",
+			"player": "bf"
+		}
+	},
+	"songName": "Romantic Nights",
+	"timeChanges": [
+		{
+			"d": 4,
+			"n": 4,
+			"t": 0,
+			"bpm": 70
+		}
+	],
+	"generatedBy": "Moonchart 0.4.0 & by hand",
+	"version": "2.2.2"
+}

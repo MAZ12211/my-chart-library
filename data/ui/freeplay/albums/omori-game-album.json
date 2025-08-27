@@ -1,0 +1,8 @@
+{
+  "version": "1.0.0",
+  "name": "OMORI GAME OST",
+  "artists": ["OMORI Sound Team"],
+  "albumArtAsset": "freeplay/albumRoll/omori-game-album",
+  "albumTitleAsset": "freeplay/albumRoll/omori-game-album-text",
+  "albumTitleOffsets": [20, 0]
+}

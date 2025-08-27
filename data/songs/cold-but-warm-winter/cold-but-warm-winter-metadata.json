@@ -1,0 +1,36 @@
+{
+	"timeFormat": "ms",
+	"artist": "KIKIYAMA",
+	"charter": "MAZ",
+	"offsets": {
+		"altInstrumentals": {},
+		"instrumental": -126,
+		"vocals": {}
+	},
+	"playData": {
+		"ratings": {"hard": 7},
+		"album": "yume-nikki-game-ost",
+		"stage": "veryEmptyStage",
+		"songVariations": [],
+		"noteStyle": "funkin",
+		"difficulties": [
+			"hard"
+		],
+		"characters": {
+			"girlfriend": "",
+			"opponent": "",
+			"player": "bf"
+		}
+	},
+	"songName": "Cold But Warm Winter",
+	"timeChanges": [
+		{
+			"d": 4,
+			"n": 4,
+			"t": 0,
+			"bpm": 140.722
+		}
+	],
+	"generatedBy": "Moonchart 0.4.0",
+	"version": "2.2.2"
+}

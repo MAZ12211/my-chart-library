@@ -1,0 +1,8 @@
+{
+  "version": "1.0.0",
+  "name": "FNF VERSUS OMORI",
+  "artists": ["ANGELGUTZ"],
+  "albumArtAsset": "freeplay/albumRoll/versus-omori-ost",
+  "albumTitleAsset": "freeplay/albumRoll/versus-omori-ost-text",
+  "albumTitleOffsets": [-20, 0]
+}

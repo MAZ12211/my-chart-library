@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.3 https://neeeoo.github.io/funkin-packer/
+-->
+<TextureAtlas imagePath="versus-omori-blackspace-bossrush-ost-text.png" width="527" height="194">
+	<SubTexture name="switch0001" x="265" y="1" width="261" height="192" frameX="-90" frameY="-85" frameWidth="490" frameHeight="396"/>
+	<SubTexture name="switch0002" x="265" y="1" width="261" height="192" frameX="-90" frameY="-85" frameWidth="490" frameHeight="396"/>
+	<SubTexture name="switch0003" x="265" y="1" width="261" height="192" frameX="-90" frameY="-85" frameWidth="490" frameHeight="396"/>
+	<SubTexture name="switch0004" x="265" y="1" width="261" height="192" frameX="-90" frameY="-85" frameWidth="490" frameHeight="396"/>
+	<SubTexture name="idle0001" x="1" y="1" width="261" height="192" frameX="-90" frameY="-85" frameWidth="490" frameHeight="396"/>
+	<SubTexture name="idle0002" x="1" y="1" width="261" height="192" frameX="-90" frameY="-85" frameWidth="490" frameHeight="396"/>
+	<SubTexture name="idle0003" x="1" y="1" width="261" height="192" frameX="-90" frameY="-85" frameWidth="490" frameHeight="396"/>
+	<SubTexture name="idle0004" x="1" y="1" width="261" height="192" frameX="-90" frameY="-85" frameWidth="490" frameHeight="396"/>
+	<SubTexture name="idle0005" x="1" y="1" width="261" height="192" frameX="-90" frameY="-85" frameWidth="490" frameHeight="396"/>
+	<SubTexture name="idle0006" x="1" y="1" width="261" height="192" frameX="-90" frameY="-85" frameWidth="490" frameHeight="396"/>
+	<SubTexture name="idle0007" x="1" y="1" width="261" height="192" frameX="-90" frameY="-85" frameWidth="490" frameHeight="396"/>
+	<SubTexture name="idle0008" x="1" y="1" width="261" height="192" frameX="-90" frameY="-85" frameWidth="490" frameHeight="396"/>
+</TextureAtlas>

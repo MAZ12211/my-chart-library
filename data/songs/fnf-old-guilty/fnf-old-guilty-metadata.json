@@ -1,0 +1,36 @@
+{
+	"timeFormat": "ms",
+	"artist": "ANGELGUTZ",
+	"charter": "MAZ",
+	"offsets": {
+		"altInstrumentals": {},
+		"instrumental": -82,
+		"vocals": {}
+	},
+	"playData": {
+		"ratings": {"hard": 12},
+		"album": "fnf-versus-omori",
+		"stage": "veryEmptyStage",
+		"songVariations": [],
+		"noteStyle": "funkin",
+		"difficulties": [
+			"hard"
+		],
+		"characters": {
+			"girlfriend": "",
+			"opponent": "",
+			"player": "bf"
+		}
+	},
+	"songName": "FNF OLD GUILTY",
+	"timeChanges": [
+		{
+			"d": 4,
+			"n": 4,
+			"t": 0,
+			"bpm": 200
+		}
+	],
+	"generatedBy": "Moonchart 0.4.0",
+	"version": "2.2.2"
+}

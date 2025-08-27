@@ -1,0 +1,8 @@
+{
+  "version": "1.0.0",
+  "name": "Transmission Archive ~ The SiIvaGunner All-Star Nuclear Winter Festival Collection",
+  "artists": ["Multiple"],
+  "albumArtAsset": "freeplay/albumRoll/ta",
+  "albumTitleAsset": "freeplay/albumRoll/ta-text",
+  "albumTitleOffsets": [-50, -110]
+}
