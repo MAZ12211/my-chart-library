@@ -4,7 +4,6 @@ import funkin.graphics.FunkinSprite;
 import flixel.tweens.FlxTween;
 import flixel.FlxG;
 import funkin.Conductor;
-import funkin.modding.base.ScriptedFlxSpriteGroup;
 
 class CL_credits extends Song {
     function new() {
@@ -12,7 +11,6 @@ class CL_credits extends Song {
     }
     var bf = null;
     var dad = null;
-    var spec:ScriptedFlxSpriteGroup = null;
 
     override function onSongLoaded(e) {
         super.onSongLoaded(e);
@@ -29,20 +27,6 @@ class CL_credits extends Song {
         
     }
 
-    override function onCountdownStart(e) {
-        super.onCountdownStart(e);
-        spec = ScriptedFlxSpriteGroup.init('WaveformObject', FlxG.sound.music);
-        spec.createWaveForm(70, 10, 9, 1, 0xFFFFFFFF);
-        spec.screenCenter(0x01);
-        spec.y = FlxG.height * 0.7;
-        spec.scrollFactor.set(0, 0);
-        spec.cameras = [PlayState.instance.camHUD];
-
-        if (PlayState.instance.playerStrumlin != null) {
-            PlayState.instance.insert(PlayState.instance.members.indexOf(PlayState.instance.playerStrumline) - 1, spec);
-        }
-    }
-
     override function onBeatHit(e) {
         super.onBeatHit(e);
         switch (e.beat) {
@@ -57,15 +41,5 @@ class CL_credits extends Song {
                 dad.flipX = false;
                 FlxTween.tween(dad, {x: -dad.width - 700}, 10);
         }
-    }
-    override function onSongStart(event:ScriptEvent){
-        super.onSongStart(event);
-        spec.snd = FlxG.sound.music;
-        spec.initAnalyzer();
-    }
-
-    override function onSongEnd(event:ScriptEvent){
-        super.onSongEnd(event);
-        spec.dumpSound();
     }
 }

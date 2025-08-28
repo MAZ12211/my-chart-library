@@ -21,7 +21,7 @@
     {"songName": "FNF Pokemon Master"},
     {"songName": "FNF OLD GUILTY"},
     {"songName": "Help Me"},
-    {"songName": "it-means-everything-ambient-trance-remix", "video": "it-means-everything-ambient-track"},
+    {"songName": "it-means-everything-ambient-trance-remix", "shouldResync": false, "video": "it-means-everything-ambient-track", "loopVideo": true},
     {"songName": "it-means-everything-lofi-hiphop-chillhop-remix"},
     {"songName": "Lost Library"},
     {"songName": "monochrome-uptaunt-take"},

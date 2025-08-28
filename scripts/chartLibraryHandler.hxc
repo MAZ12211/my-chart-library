@@ -29,7 +29,7 @@ class CL_Handler extends Module {
 
     public var songsArray:Array = null;
     public var bgImage:FunkinSprite = null;
-    public var defaultBG_maxVal:Int = 10; // min is 1 not 0
+    public var defaultBG_maxVal:Int = 2; // min is 1 not 0
     public var isSparrow:Bool = false;
 
     public var funkinVidSprite = null;
@@ -68,7 +68,7 @@ class CL_Handler extends Module {
                             bgImage = new FunkinSprite().loadTexture(bgPath);
                             isSparrow = false;
                         } else {
-                            bgImage = new FunkinSprite().loadTexture(Paths.image("defaults/default_" + FlxG.random.int(1, defaultBG_maxVal)));
+                            bgImage = new FunkinSprite().loadTexture(Paths.image("defaults/default_" + FlxG.random.int(2, defaultBG_maxVal)));
                         }
 
                         if (bgImage != null) {
@@ -125,15 +125,18 @@ class CL_Handler extends Module {
                             videoType: 1,
                             disableControls: false,
                             hudFadeDuration: 0, // Make this an option in the json file too?
-                            resync: true,
+                            resync: (song.shouldResync != null ? song.shouldResync : true),
                             zIndex: 500,
                             mute: (song.muteVideo != null ? song.muteVideo : true),
                             timestamp: Conductor.instance.songPosition
                         }
                         ]);
-                        funkinVidSprite.bitmap.onEndReached.add(function() {
-                            // Insert logic here I guess.
-                        });
+
+                        if (song.loopVideo || song.loopVideo != null) {
+                            funkinVidSprite.bitmap.onEndReached.add(function() {
+                                if (funkinVidSprite != null && funkinVidSprite.bitmap != null) funkinVidSprite.bitmap.time = 0;
+                            });
+                        }
                     } else {
                         trace("Play Video Event mod is disabled, broken, or not found.");
                     }

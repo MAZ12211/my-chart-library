@@ -1,0 +1,43 @@
+import funkin.play.PlayState;
+import funkin.play.song.Song;
+import funkin.graphics.FunkinSprite;
+import flixel.tweens.FlxTween;
+import flixel.FlxG;
+import funkin.Conductor;
+import flixel.text.FlxText;
+import flixel.text.FlxTextBorderStyle;
+import funkin.Paths;
+import flixel.util.FlxTimer;
+import funkin.play.PlayStatePlaylist;
+
+class CL_SilentHills extends Song {
+    function new() {
+        super("fnf-silent-hills-retaken-sanity");
+    }
+    var myText:FlxText;
+
+    override function onSongLoaded(e) {
+        super.onSongLoaded(e);
+
+        myText = new FlxText(0, 0, FlxG.width);
+        myText.text = "This chart was left unfinished up to this point.\n\nIf I remember correctly, it was too difficult.\n\n" + (PlayStatePlaylist.isStoryMode ? "Going to the next song in a couple of seconds." : "Going to the results screen in a couple of seconds.");
+        myText.setFormat(Paths.font("vcr.ttf"), 30, 0xFFffffff, "center");
+        myText.screenCenter();
+        myText.cameras = [PlayState.instance.camHUD];
+        myText.alpha = 0.001;
+        myText.setBorderStyle(FlxTextBorderStyle.OUTLINE, 0x000000, 3);
+        PlayState.instance.add(myText);
+        
+    }
+
+    override function onBeatHit(e) {
+        super.onBeatHit(e);
+        switch (e.beat) {
+            case 396:
+                FlxTween.tween(myText, {alpha: 1}, 2, {onComplete: new FlxTimer().start(10, function(timer) {
+                    PlayState.instance.endSong(true);
+                })});
+                FlxG.sound.music?.fadeOut(4, 0.2);
+        }
+    }
+}
