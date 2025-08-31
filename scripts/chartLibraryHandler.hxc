@@ -133,8 +133,13 @@ class CL_Handler extends Module {
                         ]);
 
                         if (song.loopVideo || song.loopVideo != null) {
+                            funkinVidSprite.bitmap.onEndReached.removeAll();
                             funkinVidSprite.bitmap.onEndReached.add(function() {
-                                if (funkinVidSprite != null && funkinVidSprite.bitmap != null) funkinVidSprite.bitmap.time = 0;
+                                if (funkinVidSprite != null && funkinVidSprite.bitmap != null) {
+                                    funkinVidSprite.bitmap.stop();
+                                    funkinVidSprite.bitmap.time = 0;
+                                    funkinVidSprite.bitmap.play();
+                                }
                             });
                         }
                     } else {
