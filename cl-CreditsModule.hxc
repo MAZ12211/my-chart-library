@@ -61,7 +61,7 @@ class CL_CreditsModule extends Module
                 {line: "Luckyy The Unlucky - Made Oneshot | A Solstice Run\nhttps://gamebanana.com/mods/391103\n\n"},
                 {line: "TheJadeMirror - Made Fuckass Charting\nhttps://gamebanana.com/mods/516151\n\n"},
                 {line: "Sammy The Goog - Made Random Charted FNF Remixes\nhttps://gamebanana.com/mods/547238\n\n"},
-                {line: "Idks FNF Stuff - Made fanmade charts from songs she liked much like Sammy\nhttps://gamebanana.com/members/submissions/sublog/3134781\n\n"},
+                {line: "Idks FNF Stuff - Made fanmade charts from songs she liked much like Sammy\nhttps://gamebanana.com/members/submissions/sublog/3134781\n\n"}
             ]
         }
     ];
