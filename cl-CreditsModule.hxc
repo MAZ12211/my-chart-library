@@ -15,7 +15,7 @@ class CL_CreditsModule extends Module
                 {line: "AbnormalPoof - Made the play video event"}
             ]
         },
-         {
+        {
             header: "Songs Used in My Chart Library",
             body: 
             [
@@ -52,7 +52,18 @@ class CL_CreditsModule extends Module
                 {line: "Self Aware - metacore\nhttps://www.youtube.com/channel/UCVUsJtxse-40WEdoQsL9aQg\n\n"},
                 {line: "The Swatter Song - Hypnospace Archival Project\nhttps://store.steampowered.com/app/844590/Hypnospace_Outlaw/\n\n"}
             ]
-          }
+        },
+        {
+            header: "My Chart Library Shout Outs and Inspirations",
+            body: 
+            [
+                {line: "Tutya - Made Chart Chronicles\nhttps://gamebanana.com/mods/593682\n\n"},
+                {line: "Luckyy The Unlucky - Made Oneshot | A Solstice Run\nhttps://gamebanana.com/mods/391103\n\n"},
+                {line: "TheJadeMirror - Made Fuckass Charting\nhttps://gamebanana.com/mods/516151\n\n"},
+                {line: "Sammy The Goog - Made Random Charted FNF Remixes\nhttps://gamebanana.com/mods/547238\n\n"},
+                {line: "Idks FNF Stuff - Made fanmade charts from songs she liked much like Sammy\nhttps://gamebanana.com/members/submissions/sublog/3134781\n\n"},
+            ]
+        }
     ];
 
     public function new()
