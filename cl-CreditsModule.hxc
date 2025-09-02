@@ -1,0 +1,73 @@
+import funkin.modding.module.Module;
+import funkin.ui.credits.CreditsDataHandler;
+// Credit goes to Kolo (https://x.com/KoloInDaCrib)
+
+class CL_CreditsModule extends Module 
+{
+    var MOD_CREDITS:Array<CreditsData> = 
+    [
+        {
+            header: "My Chart Library Credits",
+            body: 
+            [
+                {line: "MAZ12211 - Coded and Charted everything + did minor things"},
+                {line: "V-Slice Network - Code help"},
+                {line: "AbnormalPoof - Made the play video event"}
+            ]
+        },
+         {
+            header: "Songs Used in My Chart Library",
+            body: 
+            [
+                {line: "Apple (Unused Track) - Mike Morasky\nhttps://x.com/MikeMorasky\n\n"},
+                {line: "Battle Vapor - Toby Fox\nhttps://x.com/tobyfox"},
+                {line: "Blackspace Bossrush Sanguine - Coalmunist/Stahl\nhttps://www.youtube.com/@ReynStahl\n\n"},
+                {line: "Chaoz Impact - ParagonX9\nhttps://paragonx9.newgrounds.com/\n\n"},
+                {line: "Cold But Warm Winter - KIKIYAMA\nhttps://store.steampowered.com/app/650700/Yume_Nikki/\n\n"},
+                {line: "Credits - Funkin Sound Project\nhttps://www.youtube.com/@FNFSoundTeam\n\n"},
+                {line: "Disappearance dj-Jo Remix - cosmo@bousouP\nhttps://www.youtube.com/@djJoMusicChannel\n\n"},
+                {line: "FNF OLD ARISEN TEASER VER - StahlReyn\nhttps://www.youtube.com/@ReynStahl\n\n"},
+                {line: "FNF OLD GUILTY - ANGELGUTZ\nhttps://www.youtube.com/@M1RACLEWEAVER\n\n"},
+                {line: "FNF OLD REVERIE - ANGELZGUTZ\nhttps://www.youtube.com/@M1RACLEWEAVER\n\n"},
+                {line: "FNF Pokemon Master - Kimakurus Music\nhttps://www.youtube.com/@kimakurusMusic\n\n"},
+                {line: "FNF Silent Hills Retaken Sanity - Seberster\nhttps://www.youtube.com/@seberster\n\n"},
+                {line: "Freestyle - KawaiSprite\nhttps://kawaisprite.newgrounds.com/\n\n"},
+                {line: "Glacier - Toby Fox\nhttps://x.com/tobyfox\n\n"},
+                {line: "Graveyard - Oliver Buckland\nhttps://www.youtube.com/@OliverBuckland\n\n"},
+                {line: "Heart Of Fire - Kinuyo Yamashita\nhttps://kinuyoyamashita.com/home.html\n\n"},
+                {line: "Help Me - OR3O\nhttps://www.youtube.com/@OR3Omusic\n\n"},
+                {line: "Hypnospace Is Cool - Hot Dad\nhttps://www.youtube.com/@HotDad\n\n"},
+                {line: "It Means Everything Ambient Trance Remix - Pedro Silva\nhttps://www.youtube.com/@OMOCAT143\n\n"},
+                {line: "It Means Everything Lofi hiphop chillhop Remix - Pedro Silva\nhttps://www.youtube.com/@OMOCAT143\n\n"},
+                {line: "Living On - OR3O\nhttps://www.youtube.com/@OR3Omusic\n\n"},
+                {line: "Lost Library - Pedro Silva\nhttps://www.youtube.com/@OMOCAT143\n\n"},
+                {line: "Monochrome Uptaunt Take - Adam McHummus (now as Madame McHummus)\nhttps://www.youtube.com/@madamemchummus\n\n"},
+                {line: "MOTORZONE - Fabr\nhttps://x.com/FNFFAN737\n\n"},
+                {line: "My Time 8-bit - Bo En\nhttps://www.youtube.com/@boenyeah\n\n"},
+                {line: "Overhead HQSG - Sock.Clip\nhttps://gamebanana.com/members/2115605\n\n"},
+                {line: "Panic - Nightmargin\nhttps://www.youtube.com/@NightMargins\n\n"},
+                {line: "Porkrind Shop Electro Swing Remix - The Musical Ghost\nhttps://www.youtube.com/@The_Musical_Ghost\n\n"},
+                {line: "Really Happy Sergrix Remix - The_Mayz\n\n"},
+                {line: "Romantic Nights - SolarDTM\nhttps://www.youtube.com/@SolarDTM\n\n"},
+                {line: "Self Aware - metacore\nhttps://www.youtube.com/channel/UCVUsJtxse-40WEdoQsL9aQg\n\n"},
+                {line: "The Swatter Song - Hypnospace Archival Project\nhttps://store.steampowered.com/app/844590/Hypnospace_Outlaw/\n\n"}
+            ]
+          }
+    ];
+
+    public function new()
+    {
+        super("cl-CreditsModule");
+    }
+
+    public function onCreate(event:ScriptEvent)
+    {
+        super.onCreate(event);
+        this.active = false;
+
+        for (i in 0...MOD_CREDITS.length)
+        {
+            CreditsDataHandler.CREDITS_DATA.entries.unshift(MOD_CREDITS[MOD_CREDITS.length - 1 - i]);
+        }
+    }
+}
