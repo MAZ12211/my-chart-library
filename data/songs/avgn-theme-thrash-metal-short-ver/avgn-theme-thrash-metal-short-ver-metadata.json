@@ -1,0 +1,36 @@
+{
+	"timeFormat": "ms",
+	"artist": "biolleo",
+	"charter": "MAZ",
+	"offsets": {
+		"altInstrumentals": {},
+		"instrumental": -49,
+		"vocals": {}
+	},
+	"playData": {
+		"album": "unknown",
+		"ratings": {"hard": 10},
+		"stage": "veryEmptyStage",
+		"songVariations": [],
+		"noteStyle": "funkin",
+		"difficulties": [
+			"hard"
+		],
+		"characters": {
+			"girlfriend": "",
+			"opponent": "",
+			"player": "bf"
+		}
+	},
+	"songName": "AVGN Theme Thrash Metal Short Ver",
+	"timeChanges": [
+		{
+			"d": 4,
+			"n": 4,
+			"t": 0,
+			"bpm": 180
+		}
+	],
+	"generatedBy": "Moonchart 0.4.0",
+	"version": "2.2.2"
+}

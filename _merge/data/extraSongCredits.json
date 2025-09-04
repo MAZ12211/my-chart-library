@@ -28,6 +28,11 @@
   {"op": "add", "path": "/songs/-", "value": {"songName": "Really Happy Sergrix Remix", "credits": {"Last Placed Note": "2021/11/19 (Normal diff is 2022)", "Remix": "Sergrix"}}},
   {"op": "add", "path": "/songs/-", "value": {"songName": "FNF OLD REVERIE", "credits": {"Last Placed Note": "2021/11/29"}}},
   {"op": "add", "path": "/songs/-", "value": {"songName": "FNF Silent Hills Retaken Sanity", "credits": {"Last Placed Note": "2022/4/3"}}},
-  {"op": "add", "path": "/songs/-", "value": {"songName": "FNF OLD ARISEN TEASER VER", "credits": {"Last Placed Note": "2021/30/11", "This Rechart's Last Placed Note": "2022/1/15"}}},
-  {"op": "add", "path": "/songs/-", "value": {"songName": "Cold But Warm Winter", "credits": {"Last Placed Note": "2021/12/4"}}}
+  {"op": "add", "path": "/songs/-", "value": {"songName": "FNF OLD ARISEN TEASER VER", "credits": {"Last Placed Note": "2021/11/30", "This Rechart's Last Placed Note": "2022/1/15"}}},
+  {"op": "add", "path": "/songs/-", "value": {"songName": "Cold But Warm Winter", "credits": {"Last Placed Note": "2021/12/4"}}},
+  {"op": "add", "path": "/songs/-", "value": {"songName": "avgn-theme-thrash-metal-short-ver", "credits": {"Last Placed Note": "2022/11/19"}}},
+  {"op": "add", "path": "/songs/-", "value": {"songName": "boku-boku-feat-hatsune-miku", "credits": {"Last Placed Note": "2022/11/9"}}},
+  {"op": "add", "path": "/songs/-", "value": {"songName": "cl-burning-in-hell-old", "credits": {"Last Placed Note": "2022/6/27", "BGV": "taeyai"}}},
+  {"op": "add", "path": "/songs/-", "value": {"songName": "cl-despair-old", "credits": {"Last Placed Note": "2022/4/17"}}},
+  {"op": "add", "path": "/songs/-", "value": {"songName": "good-morning-hqsg", "credits": {"Last Placed Note": "2022/4/20"}}}
 ]

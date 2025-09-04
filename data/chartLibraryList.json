@@ -1,6 +1,6 @@
 {
   "songs": [
-	  {"songName": "Apple (Unused Track)", "init_BeatRate": 8, "init_BeatIntensity": 0.7},
+	{"songName": "Apple (Unused Track)", "init_BeatRate": 8, "init_BeatIntensity": 0.7},
     {"songName": "Graveyard", "video": "graveyard", "skipCountDown": true},
     {"songName": "Romantic Nights", "video": "romantic-nights"},
     {"songName": "hypnospace-is-cool", "video": "hypnospace-is-cool"},
@@ -31,6 +31,11 @@
     {"songName": "fnf-old-reverie"},
     {"songName": "FNF Silent Hills Retaken Sanity"},
     {"songName": "FNF OLD ARISEN TEASER VER"},
-    {"songName": "Cold But Warm Winter"}
+    {"songName": "Cold But Warm Winter"},
+    {"songName": "avgn-theme-thrash-metal-short-ver"},
+    {"songName": "boku-boku-feat-hatsune-miku"},
+    {"songName": "cl-burning-in-hell-old", "video": "cl-burning-in-hell-old"},
+    {"songName": "cl-despair-old"},
+    {"songName": "good-morning-hqsg"}
   ]
 }
