@@ -1,0 +1,48 @@
+{
+	"timeFormat": "ms",
+	"artist": "Creepa",
+	"charter": "MAZ",
+	"offsets": {
+		"altInstrumentals": {},
+		"instrumental": -32,
+		"vocals": {}
+	},
+	"playData": {
+		"ratings": {"hard": 10},
+		"album": "unknown",
+		"stage": "veryEmptyStage",
+		"songVariations": [],
+		"noteStyle": "funkin",
+		"difficulties": [
+			"hard"
+		],
+		"characters": {
+			"girlfriend": "",
+			"opponent": "",
+			"player": "bf"
+		}
+	},
+	"songName": "LF Lost Silver",
+	"timeChanges": [
+		{
+			"d": 4,
+			"n": 4,
+			"t": 0,
+			"bpm": 160
+		},
+		{
+			"d": 4,
+			"n": 4,
+			"t": 90000,
+			"bpm": 175
+		},
+		{
+			"d": 4,
+			"n": 4,
+			"t": 100971.428571429,
+			"bpm": 190
+		}
+	],
+	"generatedBy": "Moonchart 0.4.0",
+	"version": "2.2.2"
+}

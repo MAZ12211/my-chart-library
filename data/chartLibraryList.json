@@ -24,6 +24,7 @@
     {"songName": "it-means-everything-ambient-trance-remix", "shouldResync": false, "video": "it-means-everything-ambient-track", "loopVideo": true},
     {"songName": "it-means-everything-lofi-hiphop-chillhop-remix"},
     {"songName": "Lost Library"},
+	{"songName": "lf-lost-silver"},
     {"songName": "monochrome-uptaunt-take"},
     {"songName": "my-time-8-bit", "bgAnimationFPS": 3},
     {"songName": "overhead-hqsg"},
@@ -36,6 +37,12 @@
     {"songName": "boku-boku-feat-hatsune-miku"},
     {"songName": "cl-burning-in-hell-old", "video": "cl-burning-in-hell-old"},
     {"songName": "cl-despair-old"},
-    {"songName": "good-morning-hqsg"}
+    {"songName": "good-morning-hqsg"},
+    {"songName": "Lace - Hollow Knight Silksong"},
+	{"songName": "New Folderr"},
+	{"songName": "soulless-fanmade", "video": "soulless-fanmade"},
+	{"songName": "cl-glory"},
+	{"songName": "cl-requiem-calm"},
+	{"songName": "fnf-guilty-v2"}
   ]
 }

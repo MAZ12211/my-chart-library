@@ -1,0 +1,36 @@
+{
+	"timeFormat": "ms",
+	"artist": "Some guy on TikTok or Twitter I dunno",
+	"charter": "MAZ",
+	"offsets": {
+		"altInstrumentals": {},
+		"instrumental": -200,
+		"vocals": {}
+	},
+	"playData": {
+		"album": "unknown",
+		"ratings": {"hard": 99},
+		"stage": "veryEmptyStage",
+		"songVariations": [],
+		"noteStyle": "funkin",
+		"difficulties": [
+			"hard"
+		],
+		"characters": {
+			"girlfriend": "",
+			"opponent": "",
+			"player": "bf"
+		}
+	},
+	"songName": "New Folder",
+	"timeChanges": [
+		{
+			"d": 4,
+			"n": 4,
+			"t": 0,
+			"bpm": 125
+		}
+	],
+	"generatedBy": "Moonchart 0.4.0",
+	"version": "2.2.2"
+}

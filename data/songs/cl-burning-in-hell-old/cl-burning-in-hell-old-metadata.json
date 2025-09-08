@@ -8,8 +8,8 @@
 		"vocals": {}
 	},
 	"playData": {
-		"ratings": {"ratings": 7},
-		"album": "unknown"
+		"ratings": {"hard": 7},
+		"album": "unknown",
 		"stage": "veryEmptyStage",
 		"songVariations": [],
 		"noteStyle": "funkin",
