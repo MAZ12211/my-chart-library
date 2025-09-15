@@ -8,7 +8,7 @@
 		"vocals": {}
 	},
 	"playData": {
-		"ratings": {"hard": 10, "normal": 7},
+		"ratings": {"hard": 10, "normal": 6},
 		"album": "unknown",
 		"stage": "veryEmptyStage",
 		"songVariations": [],

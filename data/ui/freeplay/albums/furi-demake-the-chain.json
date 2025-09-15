@@ -1,0 +1,8 @@
+{
+  "version": "1.0.0",
+  "name": "furi-demake-the-chain",
+  "artists": ["Odd"],
+  "albumArtAsset": "freeplay/albumRoll/furi-demake-the-chain",
+  "albumTitleAsset": "freeplay/albumRoll/furi-demake-the-chain-text",
+  "albumTitleOffsets": [45, 0]
+}

@@ -1,0 +1,8 @@
+{
+  "version": "1.0.0",
+  "name": "silksong-ost-sample",
+  "artists": ["Christopher Larkin"],
+  "albumArtAsset": "freeplay/albumRoll/silksong-ost-sample",
+  "albumTitleAsset": "freeplay/albumRoll/silksong-ost-sample-text",
+  "albumTitleOffsets": [55, 0]
+}

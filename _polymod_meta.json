@@ -9,7 +9,7 @@
 	  {"name": "AbnormalPoof", "role": "Made the play video event", "url": "https://gamebanana.com/members/2636200"}
   ],
   "optionalDependencies": {
-    "extra-song-credits": ">=1.0.2",
+    "extra-song-credits": ">=1.0.3",
     "[V-Slice] Play Video Event": ">=3.1.0"
   },
   "license": "MIT"

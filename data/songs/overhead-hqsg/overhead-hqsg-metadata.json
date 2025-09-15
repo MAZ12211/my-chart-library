@@ -8,13 +8,13 @@
 		"vocals": {}
 	},
 	"playData": {
-		"ratings": {"hard": 6},
+		"ratings": {"normal": 6},
 		"album": "siIvaGunner-highest-quality-rips-volume-d",
 		"stage": "veryEmptyStage",
 		"songVariations": [],
 		"noteStyle": "funkin",
 		"difficulties": [
-			"hard"
+			"normal"
 		],
 		"characters": {
 			"girlfriend": "",

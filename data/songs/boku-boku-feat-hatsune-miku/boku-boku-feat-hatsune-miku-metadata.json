@@ -8,13 +8,13 @@
 		"vocals": {}
 	},
 	"playData": {
-		"ratings": {"hard": 18},
-		"album": "unknown",
+		"ratings": {"normal": 18},
+		"album": "crystalloid",
 		"stage": "veryEmptyStage",
 		"songVariations": [],
 		"noteStyle": "funkin",
 		"difficulties": [
-			"hard"
+			"normal"
 		],
 		"characters": {
 			"girlfriend": "",

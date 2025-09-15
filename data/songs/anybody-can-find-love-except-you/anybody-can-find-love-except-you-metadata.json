@@ -1,0 +1,36 @@
+{
+	"timeFormat": "ms",
+	"artist": "hkmori",
+	"charter": "MAZ",
+	"offsets": {
+		"altInstrumentals": {},
+		"instrumental": -311,
+		"vocals": {}
+	},
+	"playData": {
+		"ratings": {"normal": 14},
+		"album": "unrequited-love",
+		"stage": "veryEmptyStage",
+		"songVariations": [],
+		"noteStyle": "funkin",
+		"difficulties": [
+			"normal"
+		],
+		"characters": {
+			"girlfriend": "",
+			"opponent": "",
+			"player": "bf"
+		}
+	},
+	"songName": "Anybody Can Find Love (Except You)",
+	"timeChanges": [
+		{
+			"d": 4,
+			"n": 4,
+			"t": 0,
+			"bpm": 191.656
+		}
+	],
+	"generatedBy": "Moonchart 0.4.0",
+	"version": "2.2.2"
+}

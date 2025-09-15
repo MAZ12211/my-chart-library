@@ -8,13 +8,13 @@
 		"vocals": {}
 	},
 	"playData": {
-		"ratings": {"hard": 7},
+		"ratings": {"normal": 7},
 		"album": "fnf-versus-omori",
 		"stage": "veryEmptyStage",
 		"songVariations": [],
 		"noteStyle": "funkin",
 		"difficulties": [
-			"hard"
+			"normal"
 		],
 		"characters": {
 			"girlfriend": "",

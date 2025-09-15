@@ -1,0 +1,47 @@
+import funkin.play.PlayState;
+import funkin.play.song.Song;
+import funkin.graphics.FunkinSprite;
+import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
+import flixel.FlxG;
+import funkin.Conductor;
+import flixel.text.FlxText;
+import flixel.text.FlxTextBorderStyle;
+import funkin.Paths;
+import flixel.util.FlxTimer;
+import funkin.play.PlayStatePlaylist;
+import Std;
+
+class CL_bokoboku extends Song {
+    function new() {
+        super("boku-boku-feat-hatsune-miku");
+    }
+    var myText:FlxText;
+    var endTimer:Int = 25;
+
+    override function onSongLoaded(e) {
+        super.onSongLoaded(e);
+
+        myText = new FlxText(0, 0, FlxG.width);
+        myText.text = "This chart was left unfinished up to this point.\n\nIf I remember correctly, it was too difficult to chart and I couldn't figure out how to make it fun to play or bring thoughtful chart design.\n\n" + (PlayStatePlaylist.isStoryMode ? "Going to the next song in a couple of seconds." : "Going to the results screen in a couple of seconds.");
+        myText.setFormat(Paths.font("vcr.ttf"), 30, 0xFFffffff, "center", FlxTextBorderStyle.OUTLINE, 0xff000000);
+        myText.borderSize = 3;
+        myText.screenCenter();
+        myText.cameras = [PlayState.instance.camHUD];
+        myText.alpha = 0.001;
+        PlayState.instance.add(myText);
+        
+    }
+
+    override function onBeatHit(e) {
+        super.onBeatHit(e);
+        switch (e.beat) {
+            case 590:
+                FlxTween.tween(PlayState.instance, {hudCameraZoomIntensity: 0, cameraBopMultiplier: 1.0, cameraBopIntensity: 1.0}, 5);
+                FlxTween.tween(myText, {alpha: 1}, 2, {onComplete: new FlxTimer().start(endTimer, function(timer) {
+                    PlayState.instance.endSong(true);
+                })});
+                FlxG.sound.music?.fadeOut(10, 0);
+        }
+    }
+}

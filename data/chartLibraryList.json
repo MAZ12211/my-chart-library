@@ -1,6 +1,6 @@
 {
   "songs": [
-	{"songName": "Apple (Unused Track)", "init_BeatRate": 8, "init_BeatIntensity": 0.7},
+	  {"songName": "Apple (Unused Track)", "init_BeatRate": 8, "init_BeatIntensity": 0.7},
     {"songName": "Graveyard", "video": "graveyard", "skipCountDown": true},
     {"songName": "Romantic Nights", "video": "romantic-nights"},
     {"songName": "hypnospace-is-cool", "video": "hypnospace-is-cool"},
@@ -24,7 +24,7 @@
     {"songName": "it-means-everything-ambient-trance-remix", "shouldResync": false, "video": "it-means-everything-ambient-track", "loopVideo": true},
     {"songName": "it-means-everything-lofi-hiphop-chillhop-remix"},
     {"songName": "Lost Library"},
-	{"songName": "lf-lost-silver"},
+	  {"songName": "lf-lost-silver"},
     {"songName": "monochrome-uptaunt-take"},
     {"songName": "my-time-8-bit", "bgAnimationFPS": 3},
     {"songName": "overhead-hqsg"},
@@ -39,10 +39,13 @@
     {"songName": "cl-despair-old"},
     {"songName": "good-morning-hqsg"},
     {"songName": "Lace - Hollow Knight Silksong"},
-	{"songName": "New Folderr"},
-	{"songName": "soulless-fanmade", "video": "soulless-fanmade"},
-	{"songName": "cl-glory"},
-	{"songName": "cl-requiem-calm"},
-	{"songName": "fnf-guilty-v2"}
+    {"songName": "New Folderr"},
+    {"songName": "soulless-fanmade", "video": "soulless-fanmade"},
+    {"songName": "cl-glory"},
+    {"songName": "cl-requiem-calm"},
+    {"songName": "fnf-guilty-v2"},
+    {"songName": "furi-demake-the-chain"},
+    {"songName": "anybody-can-find-love-except-you"},
+    {"songName": "undertale-finale"}
   ]
 }

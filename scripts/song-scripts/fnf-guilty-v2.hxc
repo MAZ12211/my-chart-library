@@ -1,0 +1,125 @@
+import funkin.play.PlayState;
+import funkin.play.song.Song;
+import funkin.graphics.FunkinSprite;
+import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
+import flixel.FlxG;
+import funkin.Conductor;
+import flixel.text.FlxText;
+import flixel.text.FlxTextFormatMarkerPair;
+import flixel.text.FlxTextFormat;
+import flixel.text.FlxTextBorderStyle;
+import funkin.Paths;
+import flixel.util.FlxTimer;
+import funkin.play.PlayStatePlaylist;
+import Std;
+import funkin.audio.FunkinSound;
+import funkin.modding.module.ModuleHandler;
+
+class CL_Guilty_V2 extends Song {
+    function new() {
+        super("fnf-guilty-v2");
+    }
+    var myText:FlxText;
+    var endTimer:Int = 15;
+
+    override function onSongLoaded(e) {
+        super.onSongLoaded(e);
+
+        myText = new FlxText(0, 0, FlxG.width);
+        myText.setFormat(Paths.font("vcr.ttf"), 30, 0xFFffffff, "center", FlxTextBorderStyle.OUTLINE, 0xff000000);
+        myText.borderSize = 3;
+        myText.screenCenter();
+        myText.cameras = [PlayState.instance.camHUD];
+        myText.alpha = 0.001;
+        PlayState.instance.add(myText);
+        
+    }
+
+    override function onSongStart(e) {
+        super.onSongStart(e);
+        CL_Handler?.execEvent("SetCameraBop", {
+                intensity: 0,
+                rate: 4
+            });
+    }
+
+    override function onBeatHit(e) {
+        super.onBeatHit(e);
+        switch (e.beat) {
+            case 10:
+                myText.alpha = 1;
+                FunkinSound.playOnce(Paths.sound("chartingSounds/openWindow"));
+                myText.text = "Much like Despair old";
+
+            case 20:
+                FunkinSound.playOnce(Paths.sound("chartingSounds/exitWindow"));
+                myText.text = "Much like Despair old\n\n\nI only charted a specific portion of this song.";
+
+            case 30:
+                myText.alpha = 0;
+
+            case 40:
+                myText.alpha = 1;
+                FunkinSound.playOnce(Paths.sound("chartingSounds/openWindow"));
+                // myText.text = "The specfic portion 𝘢𝘭𝘴𝘰 being the end part.";
+                myText.applyMarkup(
+                    "The specfic portion *also* being the end part.",
+                    [new FlxTextFormatMarkerPair(new FlxTextFormat(0xFFFFFF00), "*")]
+                );
+
+            case 50:
+                FunkinSound.playOnce(Paths.sound("chartingSounds/exitWindow"));
+                myText.applyMarkup(
+                    "The specfic portion *also* being the end part.\n\n\nNot the entire end of the song either",
+                    [new FlxTextFormatMarkerPair(new FlxTextFormat(0xFFFFFF00), "*")]
+                );
+
+            case 60:
+                myText.alpha = 0;
+            
+            case 70:
+                myText.alpha = 1;
+                myText.clearFormats();
+                FunkinSound.playOnce(Paths.sound("chartingSounds/openWindow"));
+                myText.text = "Skipping to that part in a couple of seconds";
+
+            case 75:
+                FunkinSound.playOnce(Paths.sound("chartingSounds/keyboard1"));
+                myText.text = "Skipping to that part in a couple of seconds.";
+
+            case 80:
+                FunkinSound.playOnce(Paths.sound("chartingSounds/keyboard1"));
+                myText.text = "Skipping to that part in a couple of seconds..";
+
+            case 85:
+                FunkinSound.playOnce(Paths.sound("chartingSounds/keyboard1"));
+                myText.text = "Skipping to that part in a couple of seconds...";
+
+            case 90:
+                FunkinSound.playOnce(Paths.sound("chartingSounds/noteErase"));
+                myText.alpha = 0;
+
+            case 96:
+                ModuleHandler.getModule("cl_handler")?.scriptCall("changeSection", [247-25]);
+                CL_Handler?.execEvent("SetCameraBop", {
+                    intensity: 1,
+                    rate: 4
+                });
+
+            case 1044:
+                myText.alpha = 1;
+                FunkinSound.playOnce(Paths.sound("chartingSounds/openWindow"));
+                FlxTween.tween(PlayState.instance, {hudCameraZoomIntensity: 0, cameraBopMultiplier: 1.0, cameraBopIntensity: 1.0}, 5);
+                myText.text = "Andddd that's all I've charted for this song.";
+                new FlxTimer().start(endTimer, function(timer) {
+                    PlayState.instance.endSong(true);
+                });
+                FlxG.sound.music?.fadeOut(2, 0);
+
+            case 1050:
+                FunkinSound.playOnce(Paths.sound("chartingSounds/exitWindow"));
+                myText.text = "Andddd that's all I've charted for this song.\n\n" + (PlayStatePlaylist.isStoryMode ? "Moving on to the next chart that was actually finished entirely." : "Going to the results screen in a couple of seconds.");
+        }
+    }
+}

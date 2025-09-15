@@ -8,13 +8,13 @@
 		"vocals": {}
 	},
 	"playData": {
-		"ratings": {"hard": 8},
+		"ratings": {"normal": 8},
 		"album": "unknown",
 		"stage": "veryEmptyStage",
 		"songVariations": [],
 		"noteStyle": "funkin",
 		"difficulties": [
-			"hard"
+			"normal"
 		],
 		"characters": {
 			"girlfriend": "",

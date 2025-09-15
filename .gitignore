@@ -2,4 +2,4 @@
 /notes.txt
 *.xcf
 main.py
-artists&remixers.csv
+*.csv

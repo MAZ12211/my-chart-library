@@ -1,0 +1,8 @@
+{
+  "version": "1.0.0",
+  "name": "indie-cross-nightmare-album",
+  "artists": ["Multiple"],
+  "albumArtAsset": "freeplay/albumRoll/indie-cross-nightmare-album",
+  "albumTitleAsset": "freeplay/albumRoll/indie-cross-nightmare-album-text",
+  "albumTitleOffsets": [35, 0]
+}

@@ -1,0 +1,37 @@
+import funkin.modding.module.Module;
+import funkin.modding.module.ModuleHandler;
+
+import funkin.modding.PolymodErrorHandler;
+import funkin.modding.PolymodHandler;
+import flixel.FlxG;
+import funkin.play.PauseSubState;
+import Std;
+import funkin.Paths;
+import funkin.Assets;
+import funkin.play.PlayState;
+
+class CL_lowerPauseTextSize extends Module {
+
+    function new() {
+        super("cl_lowerPauseTextSize", 501, {
+            state: PauseSubState
+        });
+        
+        this.active = (PolymodHandler.loadedModIds.contains("extra-song-credits") ? true : false);
+    }
+
+    override function onUpdate(e) {
+        super.onUpdate(e);
+        var creditEntries = ModuleHandler?.getModule("extraSongCredits")?.scriptGet("creditEntriesArray");
+            if (Std.isOfType(FlxG.state.subState, PauseSubState)) {
+
+                if (Assets.exists(ModuleHandler?.getModule("cl_handler")?.scriptGet("jsonPath"))) {
+                    for (song in ModuleHandler?.getModule("cl_handler")?.scriptGet("songsArray")) {
+                    if (song.songName == PlayState.instance.currentChart.songName || song.songName == PlayState.instance.currentSong.id) {
+                        ExtraSongCredits?.textSize = 16;
+                    }
+                }
+            }
+        }
+    }
+}

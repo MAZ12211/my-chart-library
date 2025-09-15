@@ -1,0 +1,36 @@
+{
+	"timeFormat": "ms",
+	"artist": "Odd",
+	"charter": "MAZ",
+	"offsets": {
+		"altInstrumentals": {},
+		"instrumental": 750,
+		"vocals": {}
+	},
+	"playData": {
+		"ratings": {"normal": 4},
+		"album": "furi-demake-the-chain",
+		"stage": "veryEmptyStage",
+		"songVariations": [],
+		"noteStyle": "funkin",
+		"difficulties": [
+			"normal"
+		],
+		"characters": {
+			"girlfriend": "",
+			"opponent": "",
+			"player": "bf"
+		}
+	},
+	"songName": "Furi Demake The Chain",
+	"timeChanges": [
+		{
+			"d": 4,
+			"n": 4,
+			"t": 0,
+			"bpm": 159.985
+		}
+	],
+	"generatedBy": "Moonchart 0.4.0",
+	"version": "2.2.2"
+}

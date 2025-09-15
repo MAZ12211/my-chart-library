@@ -1,0 +1,47 @@
+import flixel.FlxG;
+
+import funkin.modding.PolymodErrorHandler;
+
+import funkin.ui.options.OptionsState;
+import funkin.modding.module.ModuleHandler;
+import funkin.modding.module.ScriptedModule;
+import funkin.save.Save;
+import funkin.modding.PolymodHandler;
+
+class CL_SaveHandler extends ScriptedModule {
+    function new() {
+        super("cl-saveHandler", 2);
+        this.active = (PolymodHandler.loadedModIds.contains("[V-Slice] Play Video Event") ? true : false);
+    }
+    public var save:Save = Save.instance;
+    public var options:Dynamic = {
+        videoCoverOpacity: 50
+    };
+
+    override function onCreate(e) {
+        super.onCreate(e);
+        if (save.modOptions.get('chart-library') == null) {
+            save.modOptions.set('chart-library', options);
+            save.flush();
+        } else {
+            options = save.modOptions.get('chart-library');
+        }
+    }
+
+    override function onStateChangeEnd(e) {
+        super.onStateChangeEnd(e);
+        if (Std.isOfType(e.targetState, OptionsState)) {
+            var prefs = e.targetState.optionsCodex.pages.get('preferences'); 
+            if (prefs != null) {
+                prefs.createPrefItemPercentage("Video Cover Opacity", "Controls the background video's brightness by making a cover behind it, increase this if you have a harder focusing on the notes.", (value:Int) -> {
+                    options.videoCoverOpacity = value;
+                }, options.videoCoverOpacity);
+
+
+            }
+        } else {
+            save.modOptions.set('chart-library', options);
+            save.flush();
+        }
+    }
+}

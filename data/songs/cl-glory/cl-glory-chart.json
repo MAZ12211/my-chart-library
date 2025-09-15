@@ -1,7 +1,7 @@
 {
 	"events": [],
 	"notes": {
-		"hard": [
+		"normal": [
 			{
 				"d": 0,
 				"k": "",
@@ -6221,7 +6221,7 @@
 		]
 	},
 	"scrollSpeed": {
-		"hard": 2.6
+		"normal": 2.6
 	},
 	"generatedBy": "Moonchart 0.4.0",
 	"version": "2.0.0"

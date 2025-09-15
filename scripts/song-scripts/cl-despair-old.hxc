@@ -1,0 +1,96 @@
+import funkin.play.PlayState;
+import funkin.play.song.Song;
+import funkin.graphics.FunkinSprite;
+import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
+import flixel.FlxG;
+import funkin.Conductor;
+import flixel.text.FlxText;
+import flixel.text.FlxTextBorderStyle;
+import funkin.Paths;
+import flixel.util.FlxTimer;
+import funkin.play.PlayStatePlaylist;
+import Std;
+import funkin.audio.FunkinSound;
+import funkin.modding.module.ModuleHandler;
+
+class CL_despair_Old extends Song {
+    function new() {
+        super("cl-despair-old");
+    }
+    var myText:FlxText;
+
+    override function onSongLoaded(e) {
+        super.onSongLoaded(e);
+
+        myText = new FlxText(0, 0, FlxG.width);
+        myText.setFormat(Paths.font("vcr.ttf"), 30, 0xFFffffff, "center", FlxTextBorderStyle.OUTLINE, 0xff000000);
+        myText.borderSize = 3;
+        myText.screenCenter();
+        myText.cameras = [PlayState.instance.camHUD];
+        myText.alpha = 0.001;
+        PlayState.instance.add(myText);
+        
+    }
+
+    override function onSongStart(e) {
+        super.onSongStart(e);
+        CL_Handler?.execEvent("SetCameraBop", {
+                intensity: 0,
+                rate: 4
+            });
+    }
+
+    override function onBeatHit(e) {
+        super.onBeatHit(e);
+        switch (e.beat) {
+            case 10:
+                myText.alpha = 1;
+                FunkinSound.playOnce(Paths.sound("chartingSounds/openWindow"));
+                myText.text = "I only charted a specific portion of this song.";
+
+            case 20:
+                myText.alpha = 0;
+
+            case 30:
+                myText.alpha = 1;
+                FunkinSound.playOnce(Paths.sound("chartingSounds/openWindow"));
+                myText.text = "The specfic portion being the end part because the song had a lot of buildup";
+
+            case 40:
+                FunkinSound.playOnce(Paths.sound("chartingSounds/exitWindow"));
+                myText.text = "The specfic portion being the end part because the song had a lot of buildup\n\n\nand I was too lazy to chart them.";
+
+            case 50:
+                myText.alpha = 0;
+            
+            case 60:
+                myText.alpha = 1;
+                FunkinSound.playOnce(Paths.sound("chartingSounds/openWindow"));
+                myText.text = "Skipping to that part in a couple of seconds";
+
+            case 65:
+                FunkinSound.playOnce(Paths.sound("chartingSounds/keyboard1"));
+                myText.text = "Skipping to that part in a couple of seconds.";
+
+            case 70:
+                FunkinSound.playOnce(Paths.sound("chartingSounds/keyboard1"));
+                myText.text = "Skipping to that part in a couple of seconds..";
+
+            case 75:
+                FunkinSound.playOnce(Paths.sound("chartingSounds/keyboard1"));
+                myText.text = "Skipping to that part in a couple of seconds...";
+
+            case 80:
+                FunkinSound.playOnce(Paths.sound("chartingSounds/noteErase"));
+                myText.alpha = 0;
+
+            case 88:
+                ModuleHandler.getModule("cl_handler")?.scriptCall("changeSection", [186-23]);
+                CL_Handler?.execEvent("SetCameraBop", {
+                    intensity: 1,
+                    rate: 4
+                });
+        }
+    }
+}

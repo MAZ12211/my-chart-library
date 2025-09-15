@@ -9,12 +9,12 @@
 	},
 	"playData": {
 		"album": "unknown",
-		"ratings": {"hard": 10},
+		"ratings": {"normal": 10},
 		"stage": "veryEmptyStage",
 		"songVariations": [],
 		"noteStyle": "funkin",
 		"difficulties": [
-			"hard"
+			"normal"
 		],
 		"characters": {
 			"girlfriend": "",

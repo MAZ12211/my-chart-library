@@ -1,6 +1,6 @@
 {
 	"timeFormat": "ms",
-	"artist": "SilvaGunner",
+	"artist": "Jami Lynne",
 	"charter": "MAZ",
 	"offsets": {
 		"altInstrumentals": {},
@@ -8,13 +8,13 @@
 		"vocals": {}
 	},
 	"playData": {
-		"ratings": {"hard": 2},
-		"album": "unknown",
+		"ratings": {"normal": 2},
+		"album": "siIvaGunner-highest-quality-rips-volume-l-again-side-b",
 		"stage": "veryEmptyStage",
 		"songVariations": [],
 		"noteStyle": "funkin",
 		"difficulties": [
-			"hard"
+			"normal"
 		],
 		"characters": {
 			"girlfriend": "",

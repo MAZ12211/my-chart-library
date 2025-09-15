@@ -1,0 +1,47 @@
+import funkin.play.PlayState;
+import funkin.play.song.Song;
+import funkin.graphics.FunkinSprite;
+import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
+import flixel.FlxG;
+import funkin.Conductor;
+import flixel.text.FlxText;
+import flixel.text.FlxTextBorderStyle;
+import funkin.Paths;
+import flixel.util.FlxTimer;
+import funkin.play.PlayStatePlaylist;
+import Std;
+
+class CL_GoodMorningHQ extends Song {
+    function new() {
+        super("good-morning-hqsg");
+    }
+    var myText:FlxText;
+    var endTimer:Int = 20;
+
+    override function onSongLoaded(e) {
+        super.onSongLoaded(e);
+
+        myText = new FlxText(0, 0, FlxG.width);
+        myText.text = "I have no clue why I left this unfinished back then\n\nImagine being lazy copying the same melody to a later section.\n\n" + (PlayStatePlaylist.isStoryMode ? "Moving on to the next song in a couple of seconds." : "Going to the results screen in a couple of seconds.");
+        myText.setFormat(Paths.font("vcr.ttf"), 30, 0xFFffffff, "center", FlxTextBorderStyle.OUTLINE, 0xff000000);
+        myText.borderSize = 3;
+        myText.screenCenter();
+        myText.cameras = [PlayState.instance.camHUD];
+        myText.alpha = 0.001;
+        PlayState.instance.add(myText);
+        
+    }
+
+    override function onBeatHit(e) {
+        super.onBeatHit(e);
+        switch (e.beat) {
+            case 204:
+                FlxTween.tween(PlayState.instance, {hudCameraZoomIntensity: 0, cameraBopMultiplier: 1.0, cameraBopIntensity: 1.0}, 5);
+                FlxTween.tween(myText, {alpha: 1}, 2, {onComplete: new FlxTimer().start(endTimer, function(timer) {
+                    PlayState.instance.endSong(true);
+                })});
+                FlxG.sound.music?.fadeOut(10, 0);
+        }
+    }
+}

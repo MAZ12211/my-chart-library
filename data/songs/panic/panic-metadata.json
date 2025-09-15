@@ -8,15 +8,13 @@
 		"vocals": {}
 	},
 	"playData": {
-		"ratings": {"easy": 3, "normal": 6, "hard": 12},
+		"ratings": {"normal": 12},
 		"album": "ta",
 		"stage": "veryEmptyStage",
 		"songVariations": [],
 		"noteStyle": "funkin",
 		"difficulties": [
-			"easy",
-			"normal",
-			"hard"
+			"normal"
 		],
 		"characters": {
 			"girlfriend": "",

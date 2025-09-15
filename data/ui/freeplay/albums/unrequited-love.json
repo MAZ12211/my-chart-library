@@ -1,0 +1,8 @@
+{
+  "version": "1.0.0",
+  "name": "unrequited-love",
+  "artists": ["hkmori"],
+  "albumArtAsset": "freeplay/albumRoll/unrequited-love",
+  "albumTitleAsset": "freeplay/albumRoll/unrequited-love-text",
+  "albumTitleOffsets": [45, 0]
+}
