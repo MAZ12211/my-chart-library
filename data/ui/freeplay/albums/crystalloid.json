@@ -4,5 +4,5 @@
   "artists": ["Odd"],
   "albumArtAsset": "freeplay/albumRoll/crystalloid",
   "albumTitleAsset": "freeplay/albumRoll/crystalloid-text",
-  "albumTitleOffsets": [45, 0]
+  "albumTitleOffsets": [10, 0]
 }

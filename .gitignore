@@ -1,4 +1,3 @@
-*.ini
 /notes.txt
 *.xcf
 main.py

@@ -75,7 +75,8 @@ class CL_CreditsModule extends Module
                 {line: "TheJadeMirror - Made Fuckass Charting\nhttps://gamebanana.com/mods/516151\n\n"},
                 {line: "Sammy The Goog - Made Random Charted FNF Remixes\nhttps://gamebanana.com/mods/547238\n\n"},
                 {line: "Idks FNF Stuff - Made fanmade charts from songs she liked much like Sammy\nhttps://gamebanana.com/members/submissions/sublog/3134781\n\n"},
-                {line: "rindosventator - Made fanmade charts from songs he liked much like Idks FNF Stuff\nhttps://gamebanana.com/members/2769177\n\n"}
+                {line: "rindosventator - Made fanmade charts from songs he liked much like Idks FNF Stuff\nhttps://gamebanana.com/members/2769177\n\n"},
+                {line: "aytom -_- - Made The Charting Scene!!!\nhttps://gamebanana.com/mods/619112\n\n"}
             ]
         }
     ];

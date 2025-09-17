@@ -39,9 +39,9 @@ class CL_Guilty_V2 extends Song {
     override function onSongStart(e) {
         super.onSongStart(e);
         CL_Handler?.execEvent("SetCameraBop", {
-                intensity: 0,
-                rate: 4
-            });
+            intensity: 0,
+            rate: 4
+        });
     }
 
     override function onBeatHit(e) {
