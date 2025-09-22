@@ -18,6 +18,7 @@ import funkin.modding.events.SongEventScriptEvent;
 import haxe.Json;
 import flixel.FlxG;
 import funkin.save.Save;
+import funkin.Preferences;
 
 class CL_Handler extends Module {
     public var jsonPath = Paths.json("chartLibraryList");
