@@ -2,7 +2,7 @@
   "version": "1.0.0",
   "name": "yume nikki game ost",
   "artists": ["KIKIYAMA"],
-  "albumArtAsset": "freeplay/albumRoll/cold-but-warm-winter",
-  "albumTitleAsset": "freeplay/albumRoll/cold-but-warm-winter-text",
+  "albumArtAsset": "freeplay/albumRoll/cl-random-songs/cold-but-warm-winter",
+  "albumTitleAsset": "freeplay/albumRoll/cl-random-songs/cold-but-warm-winter-text",
   "albumTitleOffsets": [10, 0]
 }

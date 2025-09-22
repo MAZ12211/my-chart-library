@@ -1,0 +1,26 @@
+import funkin.modding.module.Module;
+import flixel.FlxG;
+import funkin.ui.story.StoryMenuState;
+
+
+class CL_ForceNormInStoryMenu extends Module {
+    function new() {
+        super("cl_forceNormInStoryMenu", 100, {state: StoryMenuState});
+    }
+
+    var weeksToForceNorm = ["cl-random-songs", "cl-random-songs-vol2", "cl-random-songs-vol3"];
+
+    override function onUpdate(e) {
+        super.onUpdate(e);
+        var state = FlxG.state;
+        for (week in weeksToForceNorm) {
+            if (state is StoryMenuState) {
+                if (state.currentLevelId == week) {
+                    if (state.currentDifficultyId == "hard") state.changeDifficulty(-1);
+                    if (state.currentDifficultyId == "easy") state.changeDifficulty(1);
+                    else return;
+                }
+            }
+        }
+    }
+}

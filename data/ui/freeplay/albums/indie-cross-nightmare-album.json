@@ -2,7 +2,7 @@
   "version": "1.0.0",
   "name": "indie-cross-nightmare-album",
   "artists": ["Saster", "Saruky", "Tenzalt", "TheInnuend0", "Orenji Music", "YingYang48", "Rozebud", "Joan Atlas", "Mike Geno", "CDMusic", "DAGames", "CrystalSlime", "BLVKAROT", "BBPanzu", "Brandxn", "Yamahearted"],
-  "albumArtAsset": "freeplay/albumRoll/indie-cross-nightmare-album",
-  "albumTitleAsset": "freeplay/albumRoll/indie-cross-nightmare-album-text",
+  "albumArtAsset": "freeplay/albumRoll/cl-random-songs-vol2/indie-cross-nightmare-album",
+  "albumTitleAsset": "freeplay/albumRoll/cl-random-songs-vol2/indie-cross-nightmare-album-text",
   "albumTitleOffsets": [-30, 0]
 }

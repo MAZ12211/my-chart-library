@@ -2,6 +2,6 @@
   "version": "1.0.0",
   "name": "silksong-ost-sample",
   "artists": ["Christopher Larkin"],
-  "albumArtAsset": "freeplay/albumRoll/silksong-ost-sample",
-  "albumTitleAsset": "freeplay/albumRoll/silksong-ost-sample-text"
+  "albumArtAsset": "freeplay/albumRoll/cl-random-songs-vol2/silksong-ost-sample",
+  "albumTitleAsset": "freeplay/albumRoll/cl-random-songs-vol2/silksong-ost-sample-text"
 }

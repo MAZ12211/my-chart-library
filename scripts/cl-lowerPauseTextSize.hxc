@@ -23,7 +23,7 @@ class CL_lowerPauseTextSize extends Module {
     override function onUpdate(e) {
         super.onUpdate(e);
         var creditEntries = ModuleHandler?.getModule("extraSongCredits")?.scriptGet("creditEntriesArray");
-            if (Std.isOfType(FlxG.state.subState, PauseSubState)) {
+        if (Std.isOfType(FlxG.state.subState, PauseSubState)) {
 
                 if (Assets.exists(ModuleHandler?.getModule("cl_handler")?.scriptGet("jsonPath"))) {
                     for (song in ModuleHandler?.getModule("cl_handler")?.scriptGet("songsArray")) {

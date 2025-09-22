@@ -2,7 +2,7 @@
   "version": "1.0.0",
   "name": "furi-demake-the-chain",
   "artists": ["Odd"],
-  "albumArtAsset": "freeplay/albumRoll/furi-demake-the-chain",
-  "albumTitleAsset": "freeplay/albumRoll/furi-demake-the-chain-text",
+  "albumArtAsset": "freeplay/albumRoll/cl-random-songs-vol3/furi-demake-the-chain",
+  "albumTitleAsset": "freeplay/albumRoll/cl-random-songs-vol3/furi-demake-the-chain-text",
   "albumTitleOffsets": [-30, 0]
 }

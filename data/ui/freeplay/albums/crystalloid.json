@@ -2,7 +2,7 @@
   "version": "1.0.0",
   "name": "crystalloid",
   "artists": ["Odd"],
-  "albumArtAsset": "freeplay/albumRoll/crystalloid",
-  "albumTitleAsset": "freeplay/albumRoll/crystalloid-text",
+  "albumArtAsset": "freeplay/albumRoll/cl-random-songs-vol2/crystalloid",
+  "albumTitleAsset": "freeplay/albumRoll/cl-random-songs-vol2/crystalloid-text",
   "albumTitleOffsets": [10, 0]
 }

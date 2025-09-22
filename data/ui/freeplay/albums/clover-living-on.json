@@ -2,7 +2,7 @@
   "version": "1.0.0",
   "name": "CLOVER LIVING ON",
   "artists": ["OR3O"],
-  "albumArtAsset": "freeplay/albumRoll/clover-living-on",
-  "albumTitleAsset": "freeplay/albumRoll/clover-text",
+  "albumArtAsset": "freeplay/albumRoll/cl-random-songs/clover-living-on",
+  "albumTitleAsset": "freeplay/albumRoll/cl-random-songs/clover-text",
   "albumTitleOffsets": [35, 0]
 }

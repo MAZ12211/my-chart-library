@@ -2,7 +2,7 @@
   "version": "1.0.0",
   "name": "CASTLEVANIA NES",
   "artists": ["Kinuyo Yamashita"],
-  "albumArtAsset": "freeplay/albumRoll/castlevania-nes",
-  "albumTitleAsset": "freeplay/albumRoll/castlevania-nes-text",
+  "albumArtAsset": "freeplay/albumRoll/cl-random-songs/castlevania-nes",
+  "albumTitleAsset": "freeplay/albumRoll/cl-random-songs/castlevania-nes-text",
   "albumTitleOffsets": [-80, -80]
 }

@@ -1,12 +1,8 @@
 import funkin.modding.events.ScriptEvent;
 import funkin.modding.module.Module;
 import funkin.play.PlayState;
-import funkin.play.scoring.Scoring;
 import funkin.modding.module.ModuleHandler;
-import funkin.graphics.FunkinCamera;
-import funkin.ui.freeplay.FreeplayState;
 import funkin.graphics.FunkinSprite;
-import funkin.audio.FunkinSound;
 import funkin.Paths;
 import flixel.util.FlxTimer;
 import funkin.Assets;
@@ -29,6 +25,7 @@ class CL_Handler extends Module {
 
     public var songsArray:Array = null;
     public var bgImage:FunkinSprite = null;
+    public var bgImageScale:Float = null;
     public var defaultBG_maxVal:Int = 2; // min is 1 not 0
     public var isSparrow:Bool = false;
 
@@ -46,121 +43,115 @@ class CL_Handler extends Module {
     override function onSongLoaded(e) {
         super.onSongLoaded(e);
 
-        if (Assets.exists(jsonPath)) {
-            for (song in songsArray) {
-                if (song.songName == PlayState.instance.currentChart.songName || song.songName == PlayState.instance.currentSong.id) {
-                    if (PlayState.instance.opponentStrumline != null) PlayState.instance.opponentStrumline.visible = false;
-                    if (PlayState.instance.playerStrumline != null) PlayState.instance.playerStrumline.x = FlxG.width / 2 - PlayState.instance.playerStrumline.width / 2;
-                    if (PlayState.instance.comboPopUps != null) PlayState.instance.comboPopUps.offsets =  [400, 0];
+        if (!Assets.exists(jsonPath)) return;
 
-                    if (!PolymodHandler.loadedModIds.contains("[V-Slice] Play Video Event") || song.video == null) {
+        for (song in songsArray) {
+            if (song.songName != PlayState.instance.currentChart.songName && song.songName != PlayState.instance.currentSong.id) continue;
+            
+            if (PlayState.instance.opponentStrumline != null) PlayState.instance.opponentStrumline.visible = false;
+            if (PlayState.instance.playerStrumline != null) PlayState.instance.playerStrumline.x = FlxG.width / 2 - PlayState.instance.playerStrumline.width / 2;
+            if (PlayState.instance.comboPopUps != null) PlayState.instance.comboPopUps.offsets =  [400, 0];
 
-                        var bgPath = "songs/" + PlayState.instance.currentSong.id + "/" + "bg";
-                        var defaultBGLogicPath = "defaults/default_" + FlxG.random.int(1, defaultBG_maxVal);
+            if (!PolymodHandler.loadedModIds.contains("[V-Slice] Play Video Event") || song.video == null) {
 
-                        if (Assets.exists(Paths.file("images/songs/" + PlayState.instance.currentSong.id + "/" + 'bg.xml'))) {
-                            bgImage = new FunkinSprite().loadSparrow(bgPath);
-                            bgImage.animation.addByPrefix('idle', 'idle0', (song.bgAnimationFPS != null ? song.bgAnimationFPS : 10), true);
-                            isSparrow = true;
-                            if (Preferences.flashingLights && isSparrow) bgImage.animation?.play('idle');
+                var bgPath = "songs/" + PlayState.instance.currentSong.id + "/" + "bg";
+                var defaultBGLogicPath = "defaults/default_" + FlxG.random.int(1, defaultBG_maxVal);
 
-                        } else if (Assets.exists(Paths.image(bgPath))) {
-                            bgImage = new FunkinSprite().loadTexture(bgPath);
-                            isSparrow = false;
+                if (Assets.exists(Paths.file("images/songs/" + PlayState.instance.currentSong.id + "/" + 'bg.xml'))) {
+                    bgImage = new FunkinSprite().loadSparrow(bgPath);
+                    bgImage.animation.addByPrefix('idle', 'idle0', (song.bgAnimationFPS != null ? song.bgAnimationFPS : 10), true);
+                    isSparrow = true;
+                    if (Preferences.flashingLights && isSparrow) bgImage.animation?.play('idle');
 
-                        } else if (song.applyDefaultBGLogic != null || song.applyDefaultBGLogic) {
-                            bgImage = new FunkinSprite().loadTexture(defaultBGLogicPath); // I keep forgetting loadTexture has Paths.image applied to it
-                        }
+                } else if (Assets.exists(Paths.image(bgPath))) {
+                    bgImage = new FunkinSprite().loadTexture(bgPath);
+                    isSparrow = false;
 
-                        if (bgImage != null) {
-                            // I definitely did not borrow this code from the play video event
-
-                            // Scales the background to fit the screen while keeping the aspect ratio.
-                            // Math.min is used to ensure that the background is not stretched in either direction.
-                            // For example, if the background is wider than the screen, use the screen width to scale the background.
-                            // If the background is taller than the screen, use the screen height to scale the background.
-                            var scale:Float = Math.min(FlxG.width / bgImage.width, FlxG.height / bgImage.height);
-                            // Set the graphic size of the background to the scaled size.
-                            // The reason we multiply the width and height here is because setGraphicSize expects the new width and height,
-                            // not the scale factor.
-                            // For example, if the original width is 100 and the scale is 2, we want to set the graphic size to 200, not 2.
-                            // Update the hitbox of the background after resizing it.
-                            // - AI explanation because I couldn't understand the, I'm sure basic, math behind this
-                            bgImage.setGraphicSize((bgImage.width * scale), bgImage.height * scale);
-                            bgImage.updateHitbox();
-                            bgImage.screenCenter();
-                            bgImage.scrollFactor.set(0, 0);
-                            bgImage.zIndex = 300;
-                            bgImage.cameras = [PlayState.instance.camGame];
-                            if (PlayState.instance.currentStage != null) PlayState.instance.currentStage.add(bgImage);
-                        } else {
-                            continue; // Hope it prevents that weird NOR error with bgImage
-                        }
-                    } else {
-                        continue;
-                    }
-
+                } else if (song.applyDefaultBGLogic != null || song.applyDefaultBGLogic) {
+                    bgImage = new FunkinSprite().loadTexture(defaultBGLogicPath); // I keep forgetting loadTexture has Paths.image applied to it
+                
+                } else {
+                    continue; // Meant to fix a NOR at line 80
+                }
+                
+                if (bgImage != null) {
+                    // I definitely did not borrow this code from the play video event
+                    bgImageScale = Math.min(FlxG.width / bgImage.width, FlxG.height / bgImage.height);
+                    bgImage.setGraphicSize((bgImage.width * bgImageScale), bgImage.height * bgImageScale);
+                    bgImage.updateHitbox();
+                    bgImage.screenCenter();
+                    bgImage.scrollFactor.set(0, 0);
+                    bgImage.zIndex = 300;
+                    bgImage.cameras = [PlayState.instance.camGame];
+                    if (PlayState.instance.currentStage != null) PlayState.instance.currentStage.add(bgImage);
                 }
             }
+
         }
+        
     }
 
     override function onSongStart(e) {
         super.onSongStart(e);
+        if (!Assets.exists(jsonPath)) return;
 
-        if (Assets.exists(jsonPath)) {
-            for (song in songsArray) {
-                if (song.songName == PlayState.instance.currentChart.songName || song.songName == PlayState.instance.currentSong.id) {
-                    
-                    execEvent("SetCameraBop", {
-                        intensity: if (song.init_BeatIntensity != null) song.init_BeatIntensity, // dumb name, but better than beatIntensityOnStart or startingBeatIntensity imo. default is 1
-                        rate: if (song.init_BeatRate != null) song.init_BeatRate // default is 4 beats (camera bops every 4 beats)
+        for (song in songsArray) {
+            if (song.songName != PlayState.instance.currentChart.songName && song.songName != PlayState.instance.currentSong.id) continue;
+
+            execEvent("SetCameraBop", {
+                intensity: if (song.init_BeatIntensity != null) song.init_BeatIntensity, // dumb name, but better than beatIntensityOnStart or startingBeatIntensity imo. default is 1
+                rate: if (song.init_BeatRate != null) song.init_BeatRate // default is 4 beats (camera bops every 4 beats)
+            });
+
+            if (song.video != null && PolymodHandler.loadedModIds.contains("[V-Slice] Play Video Event")) {
+                funkinVidSprite = ModuleHandler.getModule("PVE_VideoModule").scriptCall("createVideo", [
+                Paths.videos(song.video),
+                {
+                    videoType: 1,
+                    disableControls: false,
+                    hudFadeDuration: 0,
+                    resync: (song.shouldResync != null ? song.shouldResync : true),
+                    zIndex: 500,
+                    mute: (song.muteVideo != null ? song.muteVideo : true),
+                    timestamp: Conductor.instance.songPosition
+                }
+                ]);
+
+                if (song.loopVideo || song.loopVideo != null) {
+                    funkinVidSprite.bitmap.onEndReached.removeAll();
+                    funkinVidSprite.bitmap.onEndReached.add(function() {
+                        if (funkinVidSprite != null && funkinVidSprite.bitmap != null) {
+                            funkinVidSprite.bitmap.stop();
+                            funkinVidSprite.bitmap.time = 0;
+                            funkinVidSprite.bitmap.play();
+                        }
                     });
-
-                    if (song.video != null && PolymodHandler.loadedModIds.contains("[V-Slice] Play Video Event")) {
-                        funkinVidSprite = ModuleHandler.getModule("PVE_VideoModule").scriptCall("createVideo", [
-                        Paths.videos(song.video),
-                        {
-                            videoType: 1,
-                            disableControls: false,
-                            hudFadeDuration: 0,
-                            resync: (song.shouldResync != null ? song.shouldResync : true),
-                            zIndex: 500,
-                            mute: (song.muteVideo != null ? song.muteVideo : true),
-                            timestamp: Conductor.instance.songPosition
-                        }
-                        ]);
-
-                        if (song.loopVideo || song.loopVideo != null) {
-                            funkinVidSprite.bitmap.onEndReached.removeAll();
-                            funkinVidSprite.bitmap.onEndReached.add(function() {
-                                if (funkinVidSprite != null && funkinVidSprite.bitmap != null) {
-                                    funkinVidSprite.bitmap.stop();
-                                    funkinVidSprite.bitmap.time = 0;
-                                    funkinVidSprite.bitmap.play();
-                                }
-                            });
-                        }
-
-                        vidCoverSprite = new FunkinSprite();
-                        vidCoverSprite.makeSolidColor(FlxG.width * 2, FlxG.height * 2, 0xFF000000);
-                        vidCoverSprite.cameras = [PlayState.instance.camHUD];
-                        vidCoverSprite.alpha = Save.instance.modOptions.get("chart-library").videoCoverOpacity / 100;
-                        if (vidCoverSprite != null) PlayState.instance.insert(PlayState.instance.members.indexOf(PlayState.instance.healthBar) - 1, vidCoverSprite);
-
-                    } else {
-                        trace("Play Video Event mod is disabled, broken, or not found.");
-                    }
                 }
 
+                vidCoverSprite = new FunkinSprite();
+                vidCoverSprite.makeSolidColor(FlxG.width * 2, FlxG.height * 2, 0xFF000000);
+                vidCoverSprite.cameras = [PlayState.instance.camHUD];
+                vidCoverSprite.alpha = Save.instance.modOptions.get("chart-library").videoCoverOpacity / 100;
+                if (vidCoverSprite != null) PlayState.instance.insert(PlayState.instance.members.indexOf(PlayState.instance.healthBar) - 1, vidCoverSprite);
+
+            } else {
+                trace("Play Video Event mod is disabled, broken, or not found.");
             }
+            
         }
+        
     }
 
     override function onSongRetry(e) {
         super.onSongRetry(e);
-        if (bgImage != null) bgImage.destroy(); // meant to fix a duplication bug
-        if (vidCoverSprite != null) vidCoverSprite.destroy();
+        if (bgImage != null) {
+            bgImage.destroy();
+            bgImage = null;
+        } // meant to fix a duplication bug
+        if (vidCoverSprite != null) {
+            vidCoverSprite.destroy();
+            vidCoverSprite = null;
+        }
     }
 
     override function onCountdownStart(e) {
@@ -198,7 +189,7 @@ class CL_Handler extends Module {
             PlayState.instance.dispatchEvent(scriptEvent);
     }
 
-    // Definitaly not stolen from FNF source code 
+    // Definitely not stolen from FNF source code
 
     public function changeSection(sections:Int):Void {
       

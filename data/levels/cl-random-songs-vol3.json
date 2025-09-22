@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "name": "3rd folder of my SM charts. Play on normal only.",
+  "name": "3rd folder of my SM charts.",
   "titleAsset": "storymenu/titles/cl-random-songs-vol3",
   "background": "#F9CF51",
   "songs": ["fnf-guilty-v2", "furi-demake-the-chain", "anybody-can-find-love-except-you", "undertale-finale"],
