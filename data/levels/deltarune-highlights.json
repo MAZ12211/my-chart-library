@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "name": "deltarune-highlights",
-  "titleAsset": "storymenu/titles/myweek",
+  "titleAsset": "storymenu/titles/deltarune-highlights",
   "background": "#F9CF51",
   "songs": ["glacier", "battle-vapor"],
   "visible": false,
