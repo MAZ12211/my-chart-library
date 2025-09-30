@@ -45,5 +45,6 @@
   {"op": "add", "path": "/songs/-", "value": {"songName": "fnf-guilty-v2", "credits": {"Last Placed Note": "2023/6/4", "Social": "https://www.youtube.com/@coquers_"}}},
   {"op": "add", "path": "/songs/-", "value": {"songName": "furi-demake-the-chain", "credits": {"Last Placed Note": "2024/1/3", "Social": "https://x.com/AJP_B"}}},
   {"op": "add", "path": "/songs/-", "value": {"songName": "anybody-can-find-love-except-you", "credits": {"Last Placed Note": "2024/1/23", "Social": "https://www.youtube.com/@totheheart"}}},
-  {"op": "add", "path": "/songs/-", "value": {"songName": "undertale-finale", "credits": {"Last Placed Note": "2023/5/11", "Remix": "Silvagunner (toonlink)", "Social": "https://x.com/tobyfox"}}}
+  {"op": "add", "path": "/songs/-", "value": {"songName": "undertale-finale", "credits": {"Last Placed Note": "2023/5/11", "Remix": "Silvagunner (toonlink)", "Social": "https://x.com/tobyfox"}}},
+  {"op": "add", "path": "/songs/-", "value": {"songName": "Boshy Remastered OST World 2", "credits": {"Last Placed Note": "Dec 2021", "Subtitle": "From maz12211 To PoiMoi", "Social": "https://www.youtube.com/@peiceofcheese87"}}}
 ]

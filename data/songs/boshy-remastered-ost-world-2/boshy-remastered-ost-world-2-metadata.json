@@ -1,0 +1,54 @@
+{
+	"timeFormat": "ms",
+	"artist": "peiceofcheese87",
+	"charter": "MAZ",
+	"offsets": {
+		"altInstrumentals": {},
+		"instrumental": -246,
+		"vocals": {}
+	},
+	"playData": {
+		"ratings": {"normal": 11},
+		"album": "i-wanna-be-the-boshy-remastered-ost",
+		"stage": "veryEmptyStage",
+		"songVariations": [],
+		"noteStyle": "funkin",
+		"difficulties": [
+			"normal"
+		],
+		"characters": {
+			"girlfriend": "",
+			"opponent": "",
+			"player": ""
+		}
+	},
+	"songName": "Boshy Remastered OST World 2",
+	"timeChanges": [
+		{
+			"d": 4,
+			"n": 4,
+			"t": 0,
+			"bpm": 147.67
+		},
+		{
+			"d": 4,
+			"n": 4,
+			"t": 10428.6586307307,
+			"bpm": 156
+		},
+		{
+			"d": 4,
+			"n": 4,
+			"t": 12095.3251691922,
+			"bpm": 211
+		},
+		{
+			"d": 4,
+			"n": 4,
+			"t": 15507.6474440737,
+			"bpm": 147.67
+		}
+	],
+	"generatedBy": "Moonchart 0.4.0",
+	"version": "2.2.2"
+}

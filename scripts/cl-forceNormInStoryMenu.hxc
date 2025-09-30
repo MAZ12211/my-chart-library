@@ -8,7 +8,7 @@ class CL_ForceNormInStoryMenu extends Module {
         super("cl_forceNormInStoryMenu", 100, {state: StoryMenuState});
     }
 
-    var weeksToForceNorm = ["cl-random-songs", "cl-random-songs-vol2", "cl-random-songs-vol3"];
+    var weeksToForceNorm = ["cl-random-songs", "cl-random-songs-vol2", "cl-random-songs-vol3", "my-secret-santa-submissions"];
 
     override function onUpdate(e) {
         super.onUpdate(e);
@@ -20,6 +20,10 @@ class CL_ForceNormInStoryMenu extends Module {
                     if (state.currentDifficultyId == "easy") state.changeDifficulty(1);
                     else return;
                 }
+                // if (state.currentLevelId == "my-secret-santa-submissions") {
+                //     state.levelTitleText = state.levelTitleText?.size * 0.5;
+                //     state.tracklistText = state.tracklistText?.size * 0.5;
+                // }
             }
         }
     }
