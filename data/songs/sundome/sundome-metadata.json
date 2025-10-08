@@ -1,0 +1,36 @@
+{
+	"timeFormat": "ms",
+	"artist": "Termination + 9mm Parabellum Bullet",
+	"charter": "MAZ",
+	"offsets": {
+		"altInstrumentals": {},
+		"instrumental": 56,
+		"vocals": {}
+	},
+	"playData": {
+		"ratings": {"normal": 10},
+		"album": "sundome",
+		"stage": "veryEmptyStage",
+		"songVariations": [],
+		"noteStyle": "funkin",
+		"difficulties": [
+			"normal"
+		],
+		"characters": {
+			"girlfriend": "",
+			"opponent": "",
+			"player": ""
+		}
+	},
+	"songName": "Sundome",
+	"timeChanges": [
+		{
+			"d": 4,
+			"n": 4,
+			"t": 0,
+			"bpm": 177.01
+		}
+	],
+	"generatedBy": "Moonchart 0.4.0",
+	"version": "2.2.2"
+}

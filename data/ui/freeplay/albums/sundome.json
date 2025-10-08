@@ -1,0 +1,8 @@
+{
+  "version": "1.0.0",
+  "name": "Sundome",
+  "artists": ["9mm Parabellum Bullet"],
+  "albumArtAsset": "freeplay/albumRoll/my-secret-santa-submissions/sundome",
+  "albumTitleAsset": "freeplay/albumRoll/my-secret-santa-submissions/sundome-text",
+  "albumTitleOffsets": [20, 0]
+}
