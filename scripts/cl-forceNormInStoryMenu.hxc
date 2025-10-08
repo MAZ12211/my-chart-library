@@ -13,18 +13,20 @@ class CL_ForceNormInStoryMenu extends Module {
     override function onUpdate(e) {
         super.onUpdate(e);
         var state = FlxG.state;
+        if (!(state is StoryMenuState)) return;
         for (week in weeksToForceNorm) {
-            if (state is StoryMenuState) {
-                if (state.currentLevelId == week) {
-                    if (state.currentDifficultyId == "hard") state.changeDifficulty(-1);
-                    if (state.currentDifficultyId == "easy") state.changeDifficulty(1);
-                    else return;
-                }
-                // if (state.currentLevelId == "my-secret-santa-submissions") {
-                //     state.levelTitleText = state.levelTitleText?.size * 0.5;
-                //     state.tracklistText = state.tracklistText?.size * 0.5;
-                // }
+            if (state.currentLevelId == week) {
+                if (state.currentDifficultyId == "hard") state.changeDifficulty(-1);
+                if (state.currentDifficultyId == "easy") state.changeDifficulty(1);
+                else return;
             }
+
+            if (state.currentLevelId == "my-secret-santa-submissions") {
+                if (state.levelTitleText != null) state.levelTitleText.size = 24;
+            } else {
+                if (state.levelTitleText != null) state.levelTitleText.size = 32;
+            }
+            
         }
     }
 }
