@@ -1,0 +1,10 @@
+codec: libsvtav1
+quality: 5%
+B frames: 3
+audio is disabled
+
+DEFAULT SETTINGS
+rate control: quality-based VBR
+GOP: 125
+Codec threads: 0
+hardware decoder and encoder are disabled

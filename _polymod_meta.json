@@ -1,7 +1,7 @@
 {
   "title": "My Chart Library",
   "description": "A Collection of my old and new charts in one place.",
-  "api_version": "0.7.4",
+  "api_version": "0.8.4",
   "mod_version": "1.2.0",
   "contributors": [
     {"name": "MAZ12211", "role": "Coded and Charted everything + did minor things"},
@@ -9,8 +9,7 @@
 	  {"name": "AbnormalPoof", "role": "Made the play video event", "url": "https://gamebanana.com/members/2636200"}
   ],
   "optionalDependencies": {
-    "extra-song-credits": ">=1.0.3",
-    "[V-Slice] Play Video Event": ">=3.1.0"
+    "extra-song-credits": ">=1.0.3"
   },
   "license": "MIT"
 }

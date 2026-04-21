@@ -1,0 +1,32 @@
+import funkin.play.notes.notekind.ScriptedNoteKind;
+import funkin.data.song.NoteParamData;
+import funkin.play.PlayState;
+import funkin.util.Constants;
+import funkin.util.GRhythmUtil;
+import funkin.input.PreciseInputManager;
+import funkin.PlayerSettings;
+import funkin.Conductor;
+import funkin.audio.FunkinSound;
+
+class ChartLibraryMine extends ScriptedNoteKind {
+    function new() {
+        super("cl-mine", "My Chart Library | Mine", "cl-mine");
+        scoreable = false;
+    }
+
+    override function onNoteHit(e) {
+        // Errors because there's no character to play the sing animation in the songs
+        // e.note.playSingAnimation = false;
+        PlayState.instance.health += Constants.HEALTH_MINE_PENALTY; // -15.0 / 100.0 * HEALTH_MAX | 15% of your health
+        FunkinSound.playOnce(Paths.sound("mine-hit"));
+
+        super.onNoteHit(e);
+    }
+    
+    override function onNoteMiss(e) {
+        e.note.visible = false;
+        e.cancel();
+
+        super.onNoteMiss(e);
+    }
+}

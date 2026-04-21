@@ -2,3 +2,5 @@
 *.xcf
 main.py
 *.csv
+videos/videos/ffmpeg.exe
+playVidEventscripts
