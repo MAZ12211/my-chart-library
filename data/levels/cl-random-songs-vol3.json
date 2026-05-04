@@ -1,9 +1,13 @@
 {
   "version": "1.0.0",
-  "name": "3rd folder of my SM charts.",
+  "name": "Random Charts Made In 2023-2024",
+  "capsule": {
+    "name": "2023-4 Charts",
+    "offsets": [20, 0]
+  },
   "titleAsset": "storymenu/titles/cl-random-songs-vol3",
   "background": "#F9CF51",
-  "songs": ["fnf-guilty-v2", "furi-demake-the-chain", "anybody-can-find-love-except-you", "undertale-finale"],
+  "songs": ["fnf-guilty-v2", "panic", "furi-demake-the-chain", "anybody-can-find-love-except-you", "undertale-finale"],
   "visible": true,
   "props": [
     {

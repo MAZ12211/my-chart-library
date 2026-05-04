@@ -4,5 +4,6 @@
   "artists": ["dj-jo"],
   "albumArtAsset": "freeplay/albumRoll/cl-random-songs/the-disappearance-of-hatsune-miku-dj-jo-remix",
   "albumTitleAsset": "freeplay/albumRoll/cl-random-songs/the-disappearance-of-hatsune-miku-dj-jo-remix-text",
+  "albumOSTName": "The Disappearance Of Hatsune Miku dj-jo Remix",
   "albumTitleOffsets": [-60, -20]
 }

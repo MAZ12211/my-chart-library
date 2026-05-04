@@ -4,5 +4,6 @@
   "artists": ["metacore"],
   "albumArtAsset": "freeplay/albumRoll/hardcore/metacore1",
   "albumTitleAsset": "freeplay/albumRoll/hardcore/metacore1-text",
+  "albumOSTName": "METACORE VOL. 1",
   "albumTitleOffsets": [-10, 0]
 }

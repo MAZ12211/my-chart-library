@@ -1,9 +1,13 @@
 {
   "version": "1.0.0",
   "name": "MAD SKILLS SHOW OFF FT. DISGUSTING ORANGE BOY",
+  "capsule": {
+    "name": "DANCE",
+    "offsets": [0, 0]
+  },
   "titleAsset": "storymenu/titles/dance",
   "background": "#F9CF51",
-  "songs": ["credits", "freestyle"],
+  "songs": ["motorzone", "credits", "freestyle"],
   "visible": true,
   "props": [
     {

@@ -19,7 +19,10 @@ class ChartLibraryMine extends ScriptedNoteKind {
         // e.note.playSingAnimation = false;
         PlayState.instance.health += Constants.HEALTH_MINE_PENALTY; // -15.0 / 100.0 * HEALTH_MAX | 15% of your health
         FunkinSound.playOnce(Paths.sound("mine-hit"));
-
+        e.doesNotesplash = true;
+        e.score -= 1000;
+        // e.isComboBreak = true;
+        // e.hitDiff = Constants.HIT_WINDOW_MS - 100; // why this don't work bruh
         super.onNoteHit(e);
     }
     
@@ -28,5 +31,10 @@ class ChartLibraryMine extends ScriptedNoteKind {
         e.cancel();
 
         super.onNoteMiss(e);
+    }
+
+    override function onNoteIncoming(e) {
+        if (PlayState.instance.isBotPlayMode) e.note.hasMissed = true;
+        super.onNoteIncoming();
     }
 }

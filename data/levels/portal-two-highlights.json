@@ -1,6 +1,10 @@
 {
   "version": "1.0.0",
   "name": "portal-2-highlights",
+  "capsule": {
+    "name": "Portal 2 Highlights",
+    "offsets": [0, 0]
+  },
   "titleAsset": "storymenu/titles/myweek",
   "background": "#F9CF51",
   "songs": ["apple"],

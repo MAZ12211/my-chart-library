@@ -4,5 +4,6 @@
   "artists": ["OMORI Sound Team"],
   "albumArtAsset": "freeplay/albumRoll/cl-random-songs/omori-game-album",
   "albumTitleAsset": "freeplay/albumRoll/cl-random-songs/omori-game-album-text",
+  "albumOSTName": "OMORI GAME OST",
   "albumTitleOffsets": [20, 0]
 }

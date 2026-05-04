@@ -9,6 +9,7 @@
 	},
 	"playData": {
 		"stage": "veryEmptyStage",
+		"ratings": {"normal": 7, "hard": 9, "easy": 5},
 		"songVariations": [],
 		"noteStyle": "funkin",
 		"difficulties": [

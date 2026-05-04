@@ -11,6 +11,7 @@ import funkin.Paths;
 import flixel.util.FlxTimer;
 import funkin.play.PlayStatePlaylist;
 import Std;
+import funkin.modding.module.ModuleHandler;
 
 class CL_GoodMorningHQ extends Song {
     function new() {
@@ -38,10 +39,9 @@ class CL_GoodMorningHQ extends Song {
         switch (e.beat) {
             case 204:
                 FlxTween.tween(PlayState.instance, {hudCameraZoomIntensity: 0, cameraBopMultiplier: 1.0, cameraBopIntensity: 1.0}, 5);
-                FlxTween.tween(myText, {alpha: 1}, 2, {onComplete: new FlxTimer().start(endTimer, function(timer) {
-                    PlayState.instance.endSong(true);
-                })});
-                FlxG.sound.music?.fadeOut(10, 0);
+                FlxTween.tween(myText, {alpha: 1}, 2, {onComplete: function() {
+                    ModuleHandler.getModule("cl_handler")?.scriptCall("startTransTimer", [endTimer, 10]);
+                }});
         }
     }
 }

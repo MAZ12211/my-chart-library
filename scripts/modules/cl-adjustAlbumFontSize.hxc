@@ -1,0 +1,48 @@
+import funkin.modding.module.Module;
+import funkin.modding.module.ModuleHandler;
+import funkin.ui.freeplay.FreeplayState;
+import flixel.text.FlxText;
+
+class CLAdjustAlbumFontSize extends Module {
+    public function new(){
+        super("cl-adjustAlbumFontSize", 120, {
+            state: FreeplayState
+        });
+    }
+
+    var ostNamesToShrink = [
+        "castlevania-nes",
+        "clover-help-me",
+        "clover-living-on",
+        "crystalloid",
+        "deltarunec3c4",
+        "furi-demake-the-chain",
+        "gilvaSunner-highest-quality-video-game-rips-volume-four-hours",
+        "i-wanna-be-the-boshy-remastered-ost",
+        "indie-cross-nightmare-album",
+        "metacore1", 
+        "omori-game-album",
+        "siIvaGunner-highest-quality-rips-volume-d",
+        "siIvaGunner-highest-quality-rips-volume-l-again-side-b",
+        "silksong-ost-sample",
+        "sundome",
+        "ta",
+        "the-disappearance-of-hatsune-miku-dj-jo-remix",
+        "ultrakill-infinite-hyperdeath",
+        "unrequited-love",
+        "versus-omori-blackspace-bossrush-ost",
+        "yume-nikki-game-ost"
+    ];
+
+    function onCapsuleSelected(e) {
+        super.onCapsuleSelected(e);
+        FlxG.state.subState?.ostName?.size = 16;
+
+        // Doesn't work (maybe because extra events overrides the default font size in the switch case statement but I'm too lazy to double check)
+        // for (name in ostNamesToShrink) {
+        //     if (e.capsule?.freeplayData?.data?.id == name) {
+        //         FlxG.state.subState?.ostName?.size = 16;
+        //     }
+        // }
+    }
+}

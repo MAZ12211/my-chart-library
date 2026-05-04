@@ -4,9 +4,9 @@
   "api_version": "0.8.4",
   "mod_version": "1.2.0",
   "contributors": [
-    {"name": "MAZ12211", "role": "Coded and Charted everything + did minor things"},
+    {"name": "MAZ12211", "role": "Coded the songs, the stepMania-like video and background logic, backend stuff, misc stuff, charted everything"},
     {"name": "V-Slice Network", "role": "Code help", "url": "https://discord.gg/83tbbcZ3uT"},
-	  {"name": "AbnormalPoof", "role": "Made the play video event", "url": "https://gamebanana.com/members/2636200"}
+	  {"name": "AbnormalPoof", "role": "Made almost all of the video handling logic (resync, accounting for pausing, resuming, etc)", "url": "https://gamebanana.com/members/2636200"}
   ],
   "optionalDependencies": {
     "extra-song-credits": ">=1.0.3"

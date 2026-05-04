@@ -4,5 +4,6 @@
   "artists": ["ANGELGUTZ"],
   "albumArtAsset": "freeplay/albumRoll/cl-random-songs/versus-omori-ost",
   "albumTitleAsset": "freeplay/albumRoll/cl-random-songs/versus-omori-ost-text",
+  "albumOSTName": "VS. OMORI OST",
   "albumTitleOffsets": [-20, 0]
 }

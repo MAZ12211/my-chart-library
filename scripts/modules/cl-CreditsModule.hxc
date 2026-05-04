@@ -10,9 +10,9 @@ class CL_CreditsModule extends Module
             header: "My Chart Library Credits",
             body: 
             [
-                {line: "MAZ12211 - Coded and Charted everything + did minor things"},
+                {line: "MAZ12211 - Coded the songs, the stepMania-like video and background logic, backend stuff, misc stuff, charted everything"},
                 {line: "V-Slice Network - Code help"},
-                {line: "AbnormalPoof - Made the play video event"}
+                {line: "AbnormalPoof - Made almost all of the video handling logic (resync, accounting for pausing, resuming, etc)"}
             ]
         },
         {
@@ -63,7 +63,13 @@ class CL_CreditsModule extends Module
                 {line: "fnf-guilty-v2 - coquers_\nhttps://www.youtube.com/@coquers_\n\n"},
                 {line: "furi-demake-the-chain - AJP_B\nhttps://x.com/AJP_B\n\n"},
                 {line: "anybody-can-find-love-except-you - hkmori\nhttps://www.youtube.com/@totheheart\n\n"},
-                {line: "undertale-finale - Silvagunner (toonlink)\nhttps://x.com/tobyfox\n\n"}
+                {line: "undertale-finale - Silvagunner (toonlink)\nhttps://x.com/tobyfox\n\n"},
+                {line: "Boshy Remastered OST World 2 - Silvagunner (toonlink)\nhttps://www.youtube.com/@peiceofcheese87\n\n"},
+                {line: "Sundome - Termination and 9mm Parabellum Bullet\nhttps://www.youtube.com/@9mmCHANNEL\n\n"},
+                {line: "Kodomo - macaroom\nhttps://www.youtube.com/channel/UC7zxmv7Z8HvfQPs5vctoQdQ\n\n"},
+                {line: "Chaoz Impact - paragonx9\nhttps://paragonx9.newgrounds.com/\n\n"},
+                {line: "Baby My Phone - Yameii Online\nhttps://www.youtube.com/channel/UC7zxmv7Z8HvfQPs5vctoQdQ\n\n\n\n\n\n\n\n\n"},
+                {line: "If I forgot somebody, let me know, thank you\n\n"}
             ]
         },
         {

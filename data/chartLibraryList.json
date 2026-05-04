@@ -1,53 +1,201 @@
 {
   "songs": [
-	  {"songName": "Apple (Unused Track)", "init_BeatRate": 8},
-    {"songName": "Graveyard", "skipCountDown": true},
-    {"songName": "Romantic Nights"},
-    {"songName": "hypnospace-is-cool"},
-    {"songName": "Living On"},
-    {"songName": "credits"},
-    {"songName": "chaoz-impact"},
-    {"songName": "panic"},
-    {"songName": "self-aware"},
-    {"songName": "the-swatter-song"},
-    {"songName": "motorzone"},
-    {"songName": "freestyle"},
-    {"songName": "battle-vapor"},
-    {"songName": "Glacier"},
-    {"songName": "heart-of-fire", "init_BeatRate": 8},
-    {"songName": "porkrind-shop-electro-swing-remix"},
-    {"songName": "disappearance-dj-jo-remix"},
-    {"songName": "blackspace-bossrush-sanguine"},
-    {"songName": "FNF Pokemon Master"},
-    {"songName": "FNF OLD GUILTY"},
-    {"songName": "Help Me"},
-    {"songName": "it-means-everything-ambient-trance-remix", "loopVideo": true},
-    {"songName": "it-means-everything-lofi-hiphop-chillhop-remix"},
-    {"songName": "Lost Library"},
-	  {"songName": "lf-lost-silver"},
-    {"songName": "monochrome-uptaunt-take"},
-    {"songName": "my-time-8-bit", "bgAnimationFPS": 3},
-    {"songName": "overhead-hqsg"},
-    {"songName": "really-happy-sergrix-remix"},
-    {"songName": "fnf-old-reverie"},
-    {"songName": "FNF Silent Hills Retaken Sanity"},
-    {"songName": "FNF OLD ARISEN TEASER VER"},
-    {"songName": "Cold But Warm Winter"},
-    {"songName": "avgn-theme-thrash-metal-short-ver"},
-    {"songName": "boku-boku-feat-hatsune-miku"},
-    {"songName": "cl-burning-in-hell-old"},
-    {"songName": "cl-despair-old"},
-    {"songName": "good-morning-hqsg"},
-    {"songName": "Lace - Hollow Knight Silksong"},
-    {"songName": "New Folderr"},
-    {"songName": "soulless-fanmade"},
-    {"songName": "cl-glory"},
-    {"songName": "cl-requiem-calm"},
-    {"songName": "fnf-guilty-v2"},
-    {"songName": "furi-demake-the-chain"},
-    {"songName": "anybody-can-find-love-except-you"},
-    {"songName": "undertale-finale"},
-    {"songName": "Boshy Remastered OST World 2"},
-	  {"songName": "sundome"}
+    {
+      "songName": "Apple (Unused Track)",
+      "init_BeatRate": 8,
+      "loopVideo": true
+    },
+    {
+      "songName": "Graveyard",
+      "isSeriousSong": true,
+      "loopVideo": true
+    },
+    { "songName": "Romantic Nights", "isSeriousSong": true },
+    { "songName": "hypnospace-is-cool" },
+    {
+      "songName": "Living On",
+      "isSeriousSong": true,
+      "commentary": [
+        "MAZ: This chart was meant to make up for Help Me's reptitive and boring ass chart",
+        "MAZ: Looking back, this still has the same problem",
+        "MAZ: Really boring streams...",
+        "MAZ: BUT! I don't think I would've recognised this problem if I hadn't charted them"
+      ]
+    },
+    {
+      "songName": "credits",
+      "commentary": [
+        "MAZ: I listened to Funkin Sound Project's songs",
+        "MAZ: I listened to Funkin Sound Project's songs\n\nMAZ: and this one stood out to me",
+        "MAZ: and this one stood out to me.\n\nMAZ: and I thought it fit in with the week",
+        "MAZ: The chart was really fun to make too even if it's pretty simple",
+        "MAZ: I still what I did with Pico here lol",
+        "MAZ: it looks funny :)"
+      ]
+    },
+    {
+      "songName": "chaoz-impact",
+      "commentary": [
+        "MAZ: Pretty much the only secret santa submission chart I loved making from start to finish for two reasons",
+        "MAZ: 1. the song wasn't too hard to layer compared to my horrendous 2023's submission",
+        "MAZ: 2. I really like the song :)",
+        "MAZ: I thought the mine placement by the end was pretty cool",
+        "MAZ: I thought the mine placement by the end was pretty cool\n\nMAZ: but I had to move and remove a couple of them\nbecause I couldn't figure out how to change their hit timings"
+      ]
+    },
+    {
+      "songName": "panic",
+      "isSeriousSong": true,
+      "commentary": [
+        "MAZ: Not much to say about this one",
+        "MAZ: I listened to it on a whim and thought it'd make a good chart",
+        "MAZ: This aged well in my opinion!",
+        "MAZ: kinda wish I made multiple difficulties for it back then though"
+      ]
+    },
+    {
+      "songName": "self-aware",
+      "commentary": [
+        "MAZ: This one was kinda intimidating",
+        "MAZ: but the layering wasn't too bad/hard",
+        "MAZ: and once I finished it",
+        "MAZ: and once I finished it\n\nMAZ: it became one of my favorites",
+        "MAZ: Personally, the normal difficulty flows better than hard :]",
+        "MAZ: I recommend checking it out after this (in freeplay)",
+        "MAZ: I replay this chart with this specific difficulty just for how smooth it is to play compared to hard"
+      ]
+    },
+    {
+      "songName": "the-swatter-song",
+      "commentary": [
+        "MAZ: I didn't take this one seriously whatsoever lol."
+      ]
+    },
+    { "songName": "motorzone" },
+    { "songName": "freestyle" },
+    { "songName": "battle-vapor" },
+    { "songName": "Glacier", "isSeriousSong": true },
+    { "songName": "heart-of-fire", "init_BeatRate": 8 },
+    { "songName": "porkrind-shop-electro-swing-remix" },
+    { "songName": "disappearance-dj-jo-remix" },
+    {
+      "songName": "blackspace-bossrush-sanguine",
+      "commentary": [
+        "MAZ: can't remember if I charted this before the mod was released or after"
+      ]
+    },
+    { "songName": "FNF Pokemon Master" },
+    { "songName": "FNF OLD GUILTY" },
+    { "songName": "Help Me", "isSeriousSong": true },
+    {
+      "songName": "it-means-everything-ambient-trance-remix",
+      "loopVideo": true,
+      "commentary": [
+        "MAZ: Second chart I have ever made (first one was made in Quaver which I later uninstalled)",
+        "MAZ: Terrible and amateurish as beginner works typically go, you know"
+      ]
+    },
+    {
+      "songName": "it-means-everything-lofi-hiphop-chillhop-remix",
+      "isSeriousSong": true,
+      "commentary": [
+        "MAZ: This was charted right after the other remix",
+        "MAZ: If I remember correctly, I charted this because I needed something slower to start with as a newcomer",
+        "MAZ: Looking back, this is really, really boring"
+      ]
+    },
+    { "songName": "Lost Library", "isSeriousSong": true },
+    {
+      "songName": "lf-lost-silver",
+      "commentary": [
+        "MAZ: I mentioned Lavender Funkin' in Boku Boku",
+        "MAZ: I mentioned Lavender Funkin' in Boku Boku\n\nMAZ: This is one of my charts that I made for Lavender Funkin' which got cancelled and it didn't have a cancelled build uploaded",
+        "MAZ: This one survived because I was charting it first in arrow vortex to figure out its BPM changes",
+        "MAZ: The others got lost/deleted however, along with the mod itself from my hard drive",
+        "MAZ: I still have private YouTube uploads showcasing them though",
+        "MAZ: I still have private YouTube uploads showcasing them though\n\nMAZ: I'll get to them soon hopefully"
+      ]
+    },
+    { "songName": "monochrome-uptaunt-take" },
+    { "songName": "my-time-8-bit", "bgAnimationFPS": 3 },
+    { "songName": "overhead-hqsg" },
+    {
+      "songName": "really-happy-sergrix-remix",
+      "commentary": [
+        "MAZ: I always thought this remix was better than the original and wanted to chart it",
+        "MAZ: The initial chart was later recharted a year later, which is what you're playing right now",
+        "MAZ: You can play the other one in Freeplay if you like :thumbs-up:",
+        "MAZ: You can play the other one in Freeplay if you like :thumbs-up:\n\nMAZ: It's the hard difficulty if I remember correctly.",
+        "MAZ: During the importing process, I realized this rechart was just a nerfed version of the original chart (thus why it's on normal)",
+        "MAZ: Looking back, this is uhh kinda cramped for no reason, but it's still fun",
+        "MAZ: Looking back, this is uhh kinda cramped for no reason, but it's still fun\n\nMAZ: which is pretty much the running theme for almost all of these charts until 2024 at least",
+        "MAZ: Not as fun as I remember it being but I like the streams here more than the original/hard difficulty."
+      ]
+    },
+    { "songName": "fnf-old-reverie" },
+    { "songName": "FNF Silent Hills Retaken Sanity" },
+    { "songName": "FNF OLD ARISEN TEASER VER" },
+    { "songName": "Cold But Warm Winter", "isSeriousSong": true },
+    {
+      "songName": "avgn-theme-thrash-metal-short-ver",
+      "commentary": [
+        "MAZ: This is an odd one.",
+        "MAZ: Before FNF released weekend 1 and overhauled the engine, there were mod engines.",
+        "MAZ: One of them was called YoshiCrafter Engine (now obsolete and replaced with it's cousin, Codename Engine)",
+        "MAZ: Somebody was making a port of Mistful Crimson Morning using that engine, I helped out and coded most of the scripts for it.",
+        "MAZ: During that time, we snuck in a couple of extras and secrets",
+        "MAZ: Among them was this chart.\nAccessed by clicking somewhere on the freeplay menu.",
+        "MAZ: Which is kinda funny looking back, this chart was only made for a port lol.",
+        "MAZ: This part didn't age well in my opinion too. At least for my one-handed playstyle.",
+        "MAZ: I made two fun charts in that port too.",
+        "MAZ: I made two fun charts in that port too.\n\nMAZ: Not sure if I want want to port them or just show it off on YouTube."
+      ]
+    },
+    {
+      "songName": "boku-boku-feat-hatsune-miku",
+      "commentary": [
+        "MAZ: This one was meant to make up for the borefest that was Disappearance.",
+        "MAZ: I think I showed a snippet of this to somebody in DMs during the development of Lavender Funkin'",
+        "MAZ: I think I showed a snippet of this chart to somebody in DMs during the development of Lavender Funkin'\n\nMAZ: and since then, the chart was shelved."
+      ]
+    },
+    { "songName": "cl-burning-in-hell-old" },
+    { "songName": "cl-despair-old" },
+    { "songName": "good-morning-hqsg" },
+    { "songName": "Lace - Hollow Knight Silksong" },
+    { "songName": "New Folderr" },
+    { "songName": "soulless-fanmade" },
+    { "songName": "cl-glory" },
+    { "songName": "cl-requiem-calm" },
+    { "songName": "fnf-guilty-v2" },
+    { "songName": "furi-demake-the-chain" },
+    { "songName": "anybody-can-find-love-except-you" },
+    { "songName": "undertale-finale" },
+    { "songName": "Boshy Remastered OST World 2" },
+    {
+      "songName": "sundome",
+      "commentary": [
+        "MAZ: I still really like that minijack to the beat drop transition",
+        "MAZ: If I remember correctly, there's another one later in the chart that has two jumps followed by a roll",
+        "MAZ: yea, that one"
+      ]
+    },
+    {
+      "songName": "komodo",
+      "isSeriousSong": true,
+      "commentary": [
+        "MAZ: This one gave me loads of trouble",
+        "MAZ: I couldn't figure out how to layer this song",
+        "MAZ: which resulted with the laziest chart in the pack/event"
+      ]
+    },
+    {
+      "songName": "baby-my-phone",
+      "commentary": [
+        "MAZ: Compared to Chaoz Impact, this one was hard to layer properly without making it boring",
+        "MAZ: It's... ok i guess",
+        "MAZ: I do like the fake placements though"
+      ]
+    }
   ]
 }

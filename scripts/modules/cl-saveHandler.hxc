@@ -15,7 +15,8 @@ class CL_SaveHandler extends ScriptedModule {
     public var save:Save = Save.instance;
     public var options:Dynamic = {
         videoCoverOpacity: 50,
-        bgVids: true
+        bgVids: true,
+        commentaryMode: false
     };
 
     override function onCreate(e) {
@@ -34,7 +35,7 @@ class CL_SaveHandler extends ScriptedModule {
             var prefs = e.targetState.optionsCodex.pages.get('preferences'); 
             if (prefs != null) {
 
-                prefs.createPrefItemPercentage("Video Cover Opacity", "Controls the background video's brightness by making a cover behind it, increase this if you have a harder focusing on the notes.", (value:Int) -> {
+                prefs.createPrefItemPercentage("Video Cover Opacity", "Controls the background video's brightness by making a cover behind it, increase this if you have a harder time focusing on the notes.", (value:Int) -> {
                     options.videoCoverOpacity = value;
                 }, options.videoCoverOpacity);
 
@@ -42,6 +43,9 @@ class CL_SaveHandler extends ScriptedModule {
                     options.bgVids = value;
                 }, options.bgVids);
 
+                prefs.createPrefItemCheckbox("Commentary Mode", "Some charts will have a guy yapping every now and then about the deep dank lore of the chart mid-game, NOT RECOMMENDED FOR A FIRST PLAYTHROUGH\nPRACTICE MODE IS RECOMMENDED.", (value:Bool) -> {
+                    options.commentaryMode = value;
+                }, options.commentaryMode);
 
             }
         } else {

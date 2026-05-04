@@ -4,5 +4,6 @@
   "artists": ["Seberster"],
   "albumArtAsset": "freeplay/albumRoll/cl-random-songs/fnf-silent-hills-retaken-sanity",
   "albumTitleAsset": "freeplay/albumRoll/cl-random-songs/fnf-silent-hills-retaken-sanity-text",
+  "albumOSTName": "RETAKEN SANITY OST",
   "albumTitleOffsets": [30, 0]
 }

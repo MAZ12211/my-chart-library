@@ -1,51 +1,579 @@
 [
-  {"op": "add", "path": "/songs/-", "value": {"songName": "Graveyard", "credits": {"First Placed Note": "2025/4/18", "Social": "https://www.youtube.com/@OliverBuckland"}}},
-  {"op": "add", "path": "/songs/-", "value": {"songName": "Apple (Unused Track)", "credits": {"First Placed Note": "2025/5/27", "Social": "https://x.com/MikeMorasky"}}},
-  {"op": "add", "path": "/songs/-", "value": {"songName": "self-aware", "credits": {"Last Placed Note": "2025/7/3", "Social": "https://www.youtube.com/channel/UCVUsJtxse-40WEdoQsL9aQg"}}},
-  {"op": "add", "path": "/songs/-", "value": {"songName": "Freestyle", "credits": {"First Placed Note": "Mid June 2025", "Social": "https://kawaisprite.newgrounds.com/"}}},
-  {"op": "add", "path": "/songs/-", "value": {"songName": "Glacier", "credits": {"First Placed Note": "Mid June 2025", "Social": "https://x.com/tobyfox"}}},
-  {"op": "add", "path": "/songs/-", "value": {"songName": "Credits", "credits": {"First Placed Note": "2025/5/31", "Social": "https://www.youtube.com/@FNFSoundTeam"}}},
-  {"op": "add", "path": "/songs/-", "value": {"songName": "Romantic Nights", "credits": {"First Placed Note": "2025/5/31", "BGV": "SolarDTM", "Social": "https://www.youtube.com/@SolarDTM"}}},
-  {"op": "add", "path": "/songs/-", "value": {"songName": "Panic", "credits": {"First Placed Note": "2023/3/29", "Ripper": "literallyn01imp0rtant", "Social": "https://www.youtube.com/@NightMargins"}}},
-  {"op": "add", "path": "/songs/-", "value": {"songName": "Chaoz Impact", "credits": {"First Placed Note": "Mid-Late Dec 2024", "Subtitle": "Secret Santa 2024 Submission | to IsaacAtkins", "Social": "https://paragonx9.newgrounds.com/"}}},
-  {"op": "add", "path": "/songs/-", "value": {"songName": "battle-vapor", "credits": {"First Placed Note": "2025/6/9", "Social": "https://x.com/tobyfox"}}},
-  {"op": "add", "path": "/songs/-", "value": {"songName": "The Swatter Song", "credits": {"First Placed Note": "Late June 2025", "Social": "https://store.steampowered.com/app/844590/Hypnospace_Outlaw/"}}},
-  {"op": "add", "path": "/songs/-", "value": {"songName": "hypnospace-is-cool", "credits": {"First Placed Note": "2025/8/3", "Social": "https://www.youtube.com/@HotDad"}}},
-  {"op": "add", "path": "/songs/-", "value": {"songName": "MOTORZONE", "credits": {"First Placed Note": "Early August 2025", "Social": "https://x.com/FNFFAN737"}}},
-  {"op": "add", "path": "/songs/-", "value": {"songName": "Heart Of Fire", "credits": {"Last Placed Note": "2021/12/24", "Social": "https://kinuyoyamashita.com/home.html"}}},
-  {"op": "add", "path": "/songs/-", "value": {"songName": "porkrind-shop-electro-swing-remix", "credits": {"Last Placed Note": "2022/3/19", "Social": "https://www.youtube.com/@The_Musical_Ghost"}}},
-  {"op": "add", "path": "/songs/-", "value": {"songName": "Disappearance dj-Jo Remix", "credits": {"Last Placed Note": "2022/2/13", "Remix": "dj-Jo (feat. CircusP)", "Social": "https://www.youtube.com/@djJoMusicChannel"}}},
-  {"op": "add", "path": "/songs/-", "value": {"songName": "blackspace-bossrush-sanguine", "credits": {"Last Placed Note": "2021/12/27", "Social": "https://www.youtube.com/@ReynStahl"}}},
-  {"op": "add", "path": "/songs/-", "value": {"songName": "FNF Pokemon Master", "credits": {"Last Placed Note": "2021/12/20", "Social": "https://www.youtube.com/@kimakurusMusic"}}},
-  {"op": "add", "path": "/songs/-", "value": {"songName": "FNF OLD GUILTY", "credits": {"Last Placed Note": "2021/12/8", "Social": "https://www.youtube.com/@M1RACLEWEAVER"}}},
-  {"op": "add", "path": "/songs/-", "value": {"songName": "Help Me", "credits": {"Last Placed Note": "2022/2/25", "Social": "https://www.youtube.com/@OR3Omusic"}}},
-  {"op": "add", "path": "/songs/-", "value": {"songName": "It Means Everything Ambient Trance Remix", "credits": {"Last Placed Note": "2021/12/4", "Remix": "GoneGreen", "Social": "https://www.youtube.com/@OMOCAT143"}}},
-  {"op": "add", "path": "/songs/-", "value": {"songName": "It Means Everything Lofi hiphop chillhop Remix", "credits": {"Last Placed Note": "2021/12/24", "Remix": "ryanchang", "Social": "https://www.youtube.com/@OMOCAT143"}}},
-  {"op": "add", "path": "/songs/-", "value": {"songName": "Living On", "credits": {"Last Placed Note": "2022/3/15", "Social": "https://www.youtube.com/@OR3Omusic"}}},
-  {"op": "add", "path": "/songs/-", "value": {"songName": "Lost Library", "credits": {"Last Placed Note": "2021/11/17", "Social": "https://www.youtube.com/@OMOCAT143"}}},
-  {"op": "add", "path": "/songs/-", "value": {"songName": "lf-lost-silver", "credits": {"Last Placed Note": "2022/3/3"}}},
-  {"op": "add", "path": "/songs/-", "value": {"songName": "monochrome-uptaunt-take", "credits": {"Last Placed Note": "2022/1/30", "Remix": "UpTaunt", "Social": "https://www.youtube.com/@madamemchummus"}}},
-  {"op": "add", "path": "/songs/-", "value": {"songName": "My Time 8-bit", "credits": {"Last Placed Note": "2021/11/24", "Remix": "MegaBaz + Jon SpeedArts", "Social": "https://www.youtube.com/@boenyeah"}}},
-  {"op": "add", "path": "/songs/-", "value": {"songName": "overhead-hqsg", "credits": {"Last Placed Note": "2022/2/6", "Remix": "Silvagunner", "Social": "https://gamebanana.com/members/2115605"}}},
-  {"op": "add", "path": "/songs/-", "value": {"songName": "Really Happy Sergrix Remix", "credits": {"Last Placed Note": "2021/11/19 (Normal diff is 2022)", "Remix": "Sergrix"}}},
-  {"op": "add", "path": "/songs/-", "value": {"songName": "FNF OLD REVERIE", "credits": {"Last Placed Note": "2021/11/29", "Social": "https://www.youtube.com/@M1RACLEWEAVER"}}},
-  {"op": "add", "path": "/songs/-", "value": {"songName": "FNF Silent Hills Retaken Sanity", "credits": {"Last Placed Note": "2022/4/3", "Social": "https://www.youtube.com/@seberster"}}},
-  {"op": "add", "path": "/songs/-", "value": {"songName": "FNF OLD ARISEN TEASER VER", "credits": {"Last Placed Note": "2021/11/30", "This Rechart's Last Placed Note": "2022/1/15", "Social": "https://www.youtube.com/@ReynStahl"}}},
-  {"op": "add", "path": "/songs/-", "value": {"songName": "Cold But Warm Winter", "credits": {"Last Placed Note": "2021/12/4", "Social": "https://store.steampowered.com/app/650700/Yume_Nikki/"}}},
-  {"op": "add", "path": "/songs/-", "value": {"songName": "avgn-theme-thrash-metal-short-ver", "credits": {"Last Placed Note": "2022/11/19", "Social": "https://www.youtube.com/@biolleo"}}},
-  {"op": "add", "path": "/songs/-", "value": {"songName": "boku-boku-feat-hatsune-miku", "credits": {"Last Placed Note": "2022/11/9", "Social": "https://www.youtube.com/@AVTechNO"}}},
-  {"op": "add", "path": "/songs/-", "value": {"songName": "cl-burning-in-hell-old", "credits": {"Last Placed Note": "2022/6/27", "BGV": "taeyai", "Social": "https://www.youtube.com/@IndieCrossFNF"}}},
-  {"op": "add", "path": "/songs/-", "value": {"songName": "cl-despair-old", "credits": {"Last Placed Note": "2022/4/17", "Social": "https://www.youtube.com/@IndieCrossFNF"}}},
-  {"op": "add", "path": "/songs/-", "value": {"songName": "good-morning-hqsg", "credits": {"Last Placed Note": "2022/4/20", "Remix": "Silvagunner (eg_9371)", "Social": "https://www.youtube.com/@OMOCAT143"}}},
-  {"op": "add", "path": "/songs/-", "value": {"songName": "Lace - Hollow Knight Silksong", "credits": {"Last Placed Note": "2022/6/21", "Social": "https://www.youtube.com/@ComposerLarkin"}}},
-  {"op": "add", "path": "/songs/-", "value": {"songName": "New Folder", "credits": {"Last Placed Note": "2022/10/22"}}},
-  {"op": "add", "path": "/songs/-", "value": {"songName": "soulless-fanmade", "credits": {"Last Placed Note": "2022/7/15", "BGV": "HarryLTS", "Social": "https://x.com/NikoTheFurry"}}},
-  {"op": "add", "path": "/songs/-", "value": {"songName": "cl-glory", "credits": {"Last Placed Note": "2022/11/29", "Social": "https://www.youtube.com/@Hakita"}}},
-  {"op": "add", "path": "/songs/-", "value": {"songName": "cl-requiem-calm", "credits": {"Last Placed Note": "2022/11/19", "Social": "https://www.youtube.com/@Hakita"}}},
-  {"op": "add", "path": "/songs/-", "value": {"songName": "fnf-guilty-v2", "credits": {"Last Placed Note": "2023/6/4", "Social": "https://www.youtube.com/@coquers_"}}},
-  {"op": "add", "path": "/songs/-", "value": {"songName": "furi-demake-the-chain", "credits": {"Last Placed Note": "2024/1/3", "Social": "https://x.com/AJP_B"}}},
-  {"op": "add", "path": "/songs/-", "value": {"songName": "anybody-can-find-love-except-you", "credits": {"Last Placed Note": "2024/1/23", "Social": "https://www.youtube.com/@totheheart"}}},
-  {"op": "add", "path": "/songs/-", "value": {"songName": "undertale-finale", "credits": {"Last Placed Note": "2023/5/11", "Remix": "Silvagunner (toonlink)", "Social": "https://x.com/tobyfox"}}},
-  {"op": "add", "path": "/songs/-", "value": {"songName": "Boshy Remastered OST World 2", "credits": {"Last Placed Note": "Dec 2021", "Subtitle": "From maz12211 To PoiMoi", "Social": "https://www.youtube.com/@peiceofcheese87"}}},
-  {"op": "add", "path": "/songs/-", "value": {"songName": "sundome", "credits": {"Last Placed Note": "Dec 2022", "Subtitle": "From MAZ12211 to Azrael", "Social": "https://www.youtube.com/@9mmCHANNEL"}}}
+  {
+    "op": "add",
+    "path": "/songs/-",
+    "value": {
+      "songName": "Graveyard",
+      "credits": {
+        "First Placed Note": "2025/4/18",
+        "Social": "https://www.youtube.com/@OliverBuckland"
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/songs/-",
+    "value": {
+      "songName": "Apple (Unused Track)",
+      "credits": {
+        "First Placed Note": "2025/5/27",
+        "Social": "https://x.com/MikeMorasky"
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/songs/-",
+    "value": {
+      "songName": "self-aware",
+      "credits": {
+        "Last Placed Note": "2025/7/3",
+        "Social": "https://www.youtube.com/channel/UCVUsJtxse-40WEdoQsL9aQg"
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/songs/-",
+    "value": {
+      "songName": "Freestyle",
+      "credits": {
+        "First Placed Note": "Mid June 2025",
+        "Social": "https://kawaisprite.newgrounds.com/"
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/songs/-",
+    "value": {
+      "songName": "Glacier",
+      "credits": {
+        "First Placed Note": "Mid June 2025",
+        "Social": "https://x.com/tobyfox"
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/songs/-",
+    "value": {
+      "songName": "Credits",
+      "credits": {
+        "First Placed Note": "2025/5/31",
+        "Social": "https://www.youtube.com/@FNFSoundTeam"
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/songs/-",
+    "value": {
+      "songName": "Romantic Nights",
+      "credits": {
+        "First Placed Note": "2025/5/31",
+        "BGV": "SolarDTM",
+        "Social": "https://www.youtube.com/@SolarDTM"
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/songs/-",
+    "value": {
+      "songName": "Panic",
+      "credits": {
+        "First Placed Note": "2023/3/29",
+        "Ripper": "literallyn01imp0rtant",
+        "Social": "https://www.youtube.com/@NightMargins"
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/songs/-",
+    "value": {
+      "songName": "battle-vapor",
+      "credits": {
+        "First Placed Note": "2025/6/9",
+        "Social": "https://x.com/tobyfox"
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/songs/-",
+    "value": {
+      "songName": "The Swatter Song",
+      "credits": {
+        "First Placed Note": "Late June 2025",
+        "Social": "https://store.steampowered.com/app/844590/Hypnospace_Outlaw/"
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/songs/-",
+    "value": {
+      "songName": "hypnospace-is-cool",
+      "credits": {
+        "First Placed Note": "2025/8/3",
+        "Social": "https://www.youtube.com/@HotDad"
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/songs/-",
+    "value": {
+      "songName": "MOTORZONE",
+      "credits": {
+        "First Placed Note": "Early August 2025",
+        "Social": "https://x.com/FNFFAN737"
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/songs/-",
+    "value": {
+      "songName": "Heart Of Fire",
+      "credits": {
+        "Last Placed Note": "2021/12/24",
+        "Social": "https://kinuyoyamashita.com/home.html"
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/songs/-",
+    "value": {
+      "songName": "porkrind-shop-electro-swing-remix",
+      "credits": {
+        "Last Placed Note": "2022/3/19",
+        "Social": "https://www.youtube.com/@The_Musical_Ghost"
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/songs/-",
+    "value": {
+      "songName": "Disappearance dj-Jo Remix",
+      "credits": {
+        "Last Placed Note": "2022/2/13",
+        "Remix": "dj-Jo (feat. CircusP)",
+        "Social": "https://www.youtube.com/@djJoMusicChannel"
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/songs/-",
+    "value": {
+      "songName": "blackspace-bossrush-sanguine",
+      "credits": {
+        "Last Placed Note": "2021/12/27",
+        "Social": "https://www.youtube.com/@ReynStahl"
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/songs/-",
+    "value": {
+      "songName": "FNF Pokemon Master",
+      "credits": {
+        "Last Placed Note": "2021/12/20",
+        "Social": "https://www.youtube.com/@kimakurusMusic"
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/songs/-",
+    "value": {
+      "songName": "FNF OLD GUILTY",
+      "credits": {
+        "Last Placed Note": "2021/12/8",
+        "Social": "https://www.youtube.com/@M1RACLEWEAVER"
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/songs/-",
+    "value": {
+      "songName": "Help Me",
+      "credits": {
+        "Last Placed Note": "2022/2/25",
+        "Social": "https://www.youtube.com/@OR3Omusic"
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/songs/-",
+    "value": {
+      "songName": "It Means Everything Ambient Trance Remix",
+      "credits": {
+        "Last Placed Note": "2021/12/4",
+        "Remix": "GoneGreen",
+        "Social": "https://www.youtube.com/@OMOCAT143"
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/songs/-",
+    "value": {
+      "songName": "It Means Everything Lofi hiphop chillhop Remix",
+      "credits": {
+        "Last Placed Note": "2021/12/24",
+        "Remix": "ryanchang",
+        "Social": "https://www.youtube.com/@OMOCAT143"
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/songs/-",
+    "value": {
+      "songName": "Living On",
+      "credits": {
+        "Last Placed Note": "2022/3/15",
+        "Social": "https://www.youtube.com/@OR3Omusic"
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/songs/-",
+    "value": {
+      "songName": "Lost Library",
+      "credits": {
+        "Last Placed Note": "2021/11/17",
+        "Social": "https://www.youtube.com/@OMOCAT143"
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/songs/-",
+    "value": {
+      "songName": "lf-lost-silver",
+      "credits": {
+        "Last Placed Note": "2022/3/3"
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/songs/-",
+    "value": {
+      "songName": "monochrome-uptaunt-take",
+      "credits": {
+        "Last Placed Note": "2022/1/30",
+        "Remix": "UpTaunt",
+        "Social": "https://www.youtube.com/@madamemchummus"
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/songs/-",
+    "value": {
+      "songName": "My Time 8-bit",
+      "credits": {
+        "Last Placed Note": "2021/11/24",
+        "Remix": "MegaBaz + Jon SpeedArts",
+        "Social": "https://www.youtube.com/@boenyeah"
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/songs/-",
+    "value": {
+      "songName": "overhead-hqsg",
+      "credits": {
+        "Last Placed Note": "2022/2/6",
+        "Remix": "Silvagunner",
+        "Social": "https://gamebanana.com/members/2115605"
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/songs/-",
+    "value": {
+      "songName": "Really Happy Sergrix Remix",
+      "credits": {
+        "Last Placed Note": "2021/11/19 (Normal diff is 2022)",
+        "Remix": "Sergrix"
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/songs/-",
+    "value": {
+      "songName": "FNF OLD REVERIE",
+      "credits": {
+        "Last Placed Note": "2021/11/29",
+        "Social": "https://www.youtube.com/@M1RACLEWEAVER"
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/songs/-",
+    "value": {
+      "songName": "FNF Silent Hills Retaken Sanity",
+      "credits": {
+        "Last Placed Note": "2022/4/3",
+        "Social": "https://www.youtube.com/@seberster"
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/songs/-",
+    "value": {
+      "songName": "FNF OLD ARISEN TEASER VER",
+      "credits": {
+        "Last Placed Note": "2021/11/30",
+        "This Rechart's Last Placed Note": "2022/1/15",
+        "Social": "https://www.youtube.com/@ReynStahl"
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/songs/-",
+    "value": {
+      "songName": "Cold But Warm Winter",
+      "credits": {
+        "Last Placed Note": "2021/12/4",
+        "Social": "https://store.steampowered.com/app/650700/Yume_Nikki/"
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/songs/-",
+    "value": {
+      "songName": "avgn-theme-thrash-metal-short-ver",
+      "credits": {
+        "Last Placed Note": "2022/11/19",
+        "Social": "https://www.youtube.com/@biolleo"
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/songs/-",
+    "value": {
+      "songName": "boku-boku-feat-hatsune-miku",
+      "credits": {
+        "Last Placed Note": "2022/11/9",
+        "Social": "https://www.youtube.com/@AVTechNO"
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/songs/-",
+    "value": {
+      "songName": "cl-burning-in-hell-old",
+      "credits": {
+        "Last Placed Note": "2022/6/27",
+        "BGV": "taeyai",
+        "Social": "https://www.youtube.com/@IndieCrossFNF"
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/songs/-",
+    "value": {
+      "songName": "cl-despair-old",
+      "credits": {
+        "Last Placed Note": "2022/4/17",
+        "Social": "https://www.youtube.com/@IndieCrossFNF"
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/songs/-",
+    "value": {
+      "songName": "good-morning-hqsg",
+      "credits": {
+        "Last Placed Note": "2022/4/20",
+        "Remix": "Silvagunner (eg_9371)",
+        "Social": "https://www.youtube.com/@OMOCAT143"
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/songs/-",
+    "value": {
+      "songName": "Lace - Hollow Knight Silksong",
+      "credits": {
+        "Last Placed Note": "2022/6/21",
+        "Social": "https://www.youtube.com/@ComposerLarkin"
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/songs/-",
+    "value": {
+      "songName": "New Folder",
+      "credits": {
+        "Last Placed Note": "2022/10/22"
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/songs/-",
+    "value": {
+      "songName": "soulless-fanmade",
+      "credits": {
+        "Last Placed Note": "2022/7/15",
+        "BGV": "HarryLTS",
+        "Social": "https://x.com/NikoTheFurry"
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/songs/-",
+    "value": {
+      "songName": "cl-glory",
+      "credits": {
+        "Last Placed Note": "2022/11/29",
+        "Social": "https://www.youtube.com/@Hakita"
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/songs/-",
+    "value": {
+      "songName": "cl-requiem-calm",
+      "credits": {
+        "Last Placed Note": "2022/11/19",
+        "Social": "https://www.youtube.com/@Hakita"
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/songs/-",
+    "value": {
+      "songName": "fnf-guilty-v2",
+      "credits": {
+        "Last Placed Note": "2023/6/4",
+        "Social": "https://www.youtube.com/@coquers_"
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/songs/-",
+    "value": {
+      "songName": "furi-demake-the-chain",
+      "credits": {
+        "Last Placed Note": "2024/1/3",
+        "Social": "https://x.com/AJP_B"
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/songs/-",
+    "value": {
+      "songName": "anybody-can-find-love-except-you",
+      "credits": {
+        "Last Placed Note": "2024/1/23",
+        "Social": "https://www.youtube.com/@totheheart"
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/songs/-",
+    "value": {
+      "songName": "undertale-finale",
+      "credits": {
+        "Last Placed Note": "2023/5/11",
+        "Remix": "Silvagunner (toonlink)",
+        "Social": "https://x.com/tobyfox"
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/songs/-",
+    "value": {
+      "songName": "Boshy Remastered OST World 2",
+      "credits": {
+        "Last Placed Note": "Dec 2021",
+        "Subtitle": "From maz12211 To PoiMoi",
+        "Social": "https://www.youtube.com/@peiceofcheese87"
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/songs/-",
+    "value": {
+      "songName": "sundome",
+      "credits": {
+        "Last Placed Note": "Dec 2022",
+        "Subtitle": "From MAZ12211 to Azrael",
+        "Social": "https://www.youtube.com/@9mmCHANNEL"
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/songs/-",
+    "value": {
+      "songName": "kodomo",
+      "credits": {
+        "Last Placed Note": "Dec 2023",
+        "Subtitle": "From MAZ12211 to Martzi",
+        "Social": "https://www.youtube.com/channel/UC7zxmv7Z8HvfQPs5vctoQdQ"
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/songs/-",
+    "value": {
+      "songName": "Chaoz Impact",
+      "credits": {
+        "First Placed Note": "Dec 2024",
+        "Subtitle": "Secret Santa 2024 Submission | to IsaacAtkins",
+        "Social": "https://paragonx9.newgrounds.com/"
+      }
+    }
+  },
+  {
+    "op": "add",
+    "path": "/songs/-",
+    "value": {
+      "songName": "baby-my-phone",
+      "credits": {
+        "Last Placed Note": "Dec 2025",
+        "Subtitle": "From MAZ12211 to xch00F",
+        "Social": "https://www.youtube.com/@OSEANWORLD"
+      }
+    }
+  }
 ]

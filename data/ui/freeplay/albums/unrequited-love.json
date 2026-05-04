@@ -4,5 +4,6 @@
   "artists": ["hkmori"],
   "albumArtAsset": "freeplay/albumRoll/cl-random-songs-vol3/unrequited-love",
   "albumTitleAsset": "freeplay/albumRoll/cl-random-songs-vol3/unrequited-love-text",
+  "albumOSTName": "Unrequited Love",
   "albumTitleOffsets": [-30, 0]
 }

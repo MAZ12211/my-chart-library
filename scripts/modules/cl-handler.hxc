@@ -41,6 +41,25 @@ class CL_Handler extends Module {
 
     public var funkinVidSprite:FunkinVideoSprite = null; // video sprite
     public var vidCoverSprite:FunkinSprite = null; // The black cover that's placed in front of the video
+    
+    public var commentaryTexts = [];
+    public var defaultCommentaryTexts = [
+        "MAZ: Hi",
+        "iH :ZAM",
+        "MAZ: Ello",
+        "MAZ: What up.",
+        "MAZ: Are you on your phone?\nGood luck bruh.\nthat's alien playstyle for me...",
+        "MAZ: Sorry if you missed a note while reading this.",
+        "MAZ: Bump up the video cover opacity if you have a hard time reading the notes.",
+        "MAZ: :thumbs-up:",
+        "MAZ: If you think I'll laugh at you for sucking ass.\nDon't. Chances are I'm AFK.",
+        "MAZ: Imagine shelving a mod for months\nand then end up finishing it within a couple of weeks.",
+        "MAZ: Peace be upon you."
+    ];
+    public var text:FlxText = null; // text that appears in the left side of the screen
+
+    public var transTimer:FlxTimer = null;
+    public var fadeCommentaryTextTimer:FlxTimer = null;
 
     function new() {
         super("cl_handler");
@@ -76,6 +95,10 @@ class CL_Handler extends Module {
 
         // BG image
         bgImage?.destroy();
+
+        // Commentary text
+        text?.destroy();
+        commentaryTexts = [];
     }
 
     function applyVideoVolume() {
@@ -112,7 +135,7 @@ class CL_Handler extends Module {
         else funkinVidSprite.load(Paths.videos(PlayState.instance.currentSong.id + ".webm"));
         PlayState.instance.add(funkinVidSprite);
 
-        // old code that loops the video - used in it means everything
+        // old looping the video code
         
         // funkinVidSprite.bitmap.onEndReached.removeAll();
         // funkinVidSprite.bitmap.onEndReached.add(() -> {
@@ -169,14 +192,58 @@ class CL_Handler extends Module {
         PlayState.instance?.currentStage?.add(bgImage);
     }
 
-    override function onSongLoaded(e:ScriptEvent) {
-        super.onSongLoaded(e);
+    function setupTextCommentary() {
+        text?.destroy();
 
+        text = new FlxText(20, 400, 300);
+        text.text = "";
+        text.setFormat(Paths.font("trebuc.ttf"), 15, FlxColor.fromRGB(229, 197, 16), "left", FlxTextBorderStyle.OUTLINE, 0xff000000);
+        text.borderSize = 1;
+        text.antialiasing = true;
+        text.cameras = [PlayState.instance.camCutscene];
+        text.alpha = 0.001;
+        PlayState.instance.add(text);
+    }
+
+    function showComment(index:Int) {
+        if (!Save.instance.modOptions.get("chart-library").commentaryMode) return; // The commentary is still on when the song loads but there won't be text mid-song
+
+        fadeCommentaryTextTimer?.cancel();
+        text.alpha = 1;
+        text.text = commentaryTexts[index];
+        FunkinSound.playOnce(Paths.sound("talk"));
+        fadeCommentaryTextTimer = new FlxTimer().start(Conductor.instance.beatLengthMs * 16 / 1000, function(timer) {
+            text.alpha = 0;
+        });
+    }
+
+    override function onSongLoaded(e) {
+        super.onSongLoaded(e);
         cleanupVisuals();
         
         if (!Assets.exists(jsonPath)) return;
         currentConfig = getConfigForCurrentSong();
-        trace("Loaded config for " + PlayState.instance.currentSong.id + ": " + Json.stringify(currentConfig));
+        if (currentConfig == null) return;
+        commentaryTexts = currentConfig.commentary;
+
+        setupTextCommentary();
+
+        // Messy af but whateva bro
+        new FlxTimer().start(Conductor.instance.beatLengthMs * 3 / 1000, function(timer) {
+            if (!PlayState.instance?.isGamePaused && PlayState.instance?.isInCountdown) {
+                if (!currentConfig?.isSeriousSong) text?.text = defaultCommentaryTexts[FlxG.random.int(0, defaultCommentaryTexts.length)];
+            } else {
+                text?.text = "MAZ: Bro really paused the game during the countdown...";
+            }
+            if (!currentConfig?.isSeriousSong) text?.alpha = 1;
+            if (!currentConfig?.isSeriousSong) FunkinSound.playOnce(Paths.sound("talk"));
+            new FlxTimer().start(2, function(timer) {
+                text?.text = "";
+            });
+        });
+
+        trace("Loaded config for " + PlayState.instance.currentSong.id);
+        trace("Commentary: " + Json.stringify(commentaryTexts));
 
         // Camera bop config
         execEvent("SetCameraBop", {
@@ -190,17 +257,19 @@ class CL_Handler extends Module {
         PlayState.instance.comboPopUps?.offsets = [400, 0]; // puts them to the right
 
         // Decide background type
+        // bg vid is enabled and the video exists = play video
+        // otherwise use imgs
         if (Save.instance.modOptions.get("chart-library").bgVids && Assets.exists(Paths.videos(PlayState.instance.currentSong.id + ".webm"))) setupVideoBackground();
         else setupImageBackground();
     }
 
-    override function onSongStart(e:ScriptEvent) {
+    override function onSongStart(e) {
         super.onSongStart(e);
 
         if (!Assets.exists(jsonPath)) return;
 
         // Play video (the name must be the song's internal name)
-        funkinVidSprite.play();
+        funkinVidSprite?.play();
         applyVideoVolume();
         
     }
@@ -238,12 +307,12 @@ class CL_Handler extends Module {
     override function onSongRetry(e) {
         super.onSongRetry(e);
         cleanupVisuals();
+        transTimer?.cancel();
     }
 
     override function onStepHit(e) {
         super.onStepHit(e);
-        if (funkinVidSprite?.bitmap?.isPlaying)
-            checkResync(false, true);
+        if (funkinVidSprite?.bitmap?.isPlaying) checkResync(false, true);
     }
 
     override function onPause(e) {
@@ -251,27 +320,39 @@ class CL_Handler extends Module {
         funkinVidSprite?.pause();
         applyVideoVolume();
         checkResync(true, false);
+        transTimer?.active = false;
+        fadeCommentaryTextTimer?.active = false;
     }
 
     override function onResume(e) {
         super.onResume(e);
         applyVideoVolume();
         funkinVidSprite?.resume();
+        transTimer?.active = true;
+        fadeCommentaryTextTimer?.active = true;
     }
 
     override function onFocusGained(e) {
         super.onFocusGained(e);
-        if (PlayState.instance?.isGamePaused) funkinVidSprite?.pause();
+        if (PlayState.instance?.isGamePaused) {
+            funkinVidSprite?.pause();
+            transTimer?.active = false;
+            fadeCommentaryTextTimer?.active = false;
+        }
     }
 
     override function onGameOver(e) {
         super.onGameOver(e);
         cleanupVisuals();
+        transTimer?.cancel();
+        fadeCommentaryTextTimer?.cancel();
     }
 
     override function onSongEnd(e) {
         super.onSongEnd(e);
         cleanupVisuals();
+        transTimer?.cancel();
+        fadeCommentaryTextTimer?.cancel();
     }
 
 
@@ -315,5 +396,12 @@ class CL_Handler extends Module {
       
         Conductor.instance.update(FlxG.sound?.music?.time ?? 0.0);
         PlayState.instance.resyncVocals();
+    }
+
+    public function startTransTimer(?timer:Float = 20, ?musFadeTimer:Float = 10) {
+        transTimer = new FlxTimer().start(timer, function(timer) {
+            PlayState.instance?.endSong(true);
+            FlxG.sound.music?.fadeOut(musFadeTimer, 0);
+        });
     }
 }

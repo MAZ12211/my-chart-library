@@ -11,35 +11,76 @@ class CL_credits extends Song {
     }
     var bf = null;
     var dad = null;
+    var dadTween:FlxTween = null;
+    var handler;
+    var commentaryTexts;
 
     override function onSongLoaded(e) {
         super.onSongLoaded(e);
         bf = PlayState.instance.currentStage.getBoyfriend();
         dad = PlayState.instance.currentStage.getDad();
         bf.alpha = 0.0001;
-
+        
         dad.zIndex = 1000;
         dad.screenCenter(0x11);
-        dad.y += 250;
-        dad.x = -dad.width - 200;
+        dad.y += 200;
+        dad.x = -FlxG.width + 100;
         dad.alpha = 0.5;
         PlayState.instance.currentStage.refresh();
         
+        handler = ModuleHandler.getModule("cl_handler");
+        commentaryTexts = handler?.scriptGet("commentaryTexts");
     }
 
     override function onBeatHit(e) {
         super.onBeatHit(e);
         switch (e.beat) {
-            case 48: FlxTween.tween(dad, {x: FlxG.width + 300}, 10);
+            case 8: handler?.scriptCall("showComment", [0]);
+            case 24: handler?.scriptCall("showComment", [1]);
+            case 38: handler?.scriptCall("showComment", [2]);
+            
+            case 87: handler?.scriptCall("showComment", [4]);
+            case 110: handler?.scriptCall("showComment", [5]);
+
+            case 136: handler?.scriptCall("showComment", [3]);
+
+            case 48: dadTween = FlxTween.tween(dad, {x: FlxG.width + 100}, Conductor.instance.beatLengthMs * 16 / 1000);
             case 64:
                 dad.flipX = false;
-                FlxTween.tween(dad, {x: -dad.width - 700}, 10);
+                dadTween = FlxTween.tween(dad, {x: -FlxG.width - 100}, Conductor.instance.beatLengthMs * 16 / 1000);
             case 144:
                 dad.flipX = true;
-                FlxTween.tween(dad, {x: FlxG.width + 300}, 10);
+                dadTween = FlxTween.tween(dad, {x: FlxG.width + 100}, Conductor.instance.beatLengthMs * 16 / 1000);
             case 160:
                 dad.flipX = false;
-                FlxTween.tween(dad, {x: -dad.width - 700}, 10);
+                dadTween = FlxTween.tween(dad, {x: -FlxG.width - 100}, Conductor.instance.beatLengthMs * 16 / 1000);
+        }
+    }
+
+    override function onPause(e) {
+        super.onPause(e);
+        dadTween?.active = false;
+    }
+
+    override function onResume(e) {
+        super.onResume(e);
+        dadTween?.active = true;
+    }
+
+    override function onGameOver(e) {
+        super.onResume(e);
+        dadTween?.cancel();
+    }
+
+    override function onSongRetry(e) {
+        super.onSongRetry(e);
+        dadTween?.cancel();
+    }
+
+    override function onFocusGained(e) {
+        super.onFocusGained(e);
+        if (PlayState.instance?.isGamePaused) {
+            dadTween?.active = false;
         }
     }
 }

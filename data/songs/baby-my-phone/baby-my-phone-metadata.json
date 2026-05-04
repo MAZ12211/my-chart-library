@@ -1,0 +1,47 @@
+{
+ "version": "2.2.4",
+ "songName": "Baby My Phone",
+ "artist": "Yameii Online",
+ "charter": "MAZ",
+ "offsets": { },
+ "playData": {
+  "album": "unknown",
+  "difficulties": [
+   "hard",
+   "normal"
+  ],
+  "characters": {
+   "player": "",
+   "girlfriend": "",
+   "opponent": ""
+  },
+  "stage": "veryEmptyStage",
+  "noteStyle": "funkin",
+  "ratings": {
+   "hard": 12,
+   "normal": 10
+  },
+  "previewEnd": 0
+ },
+ "generatedBy": "Friday Night Funkin' - v0.8.4",
+ "timeChanges": [
+  {
+   "t": 0,
+   "b": 0,
+   "bpm": 195,
+   "bt": [4, 4, 4, 4]
+  },
+  {
+   "t": 89230.7692307692,
+   "b": 290,
+   "bpm": 157.7,
+   "bt": [4, 4, 4, 4]
+  },
+  {
+   "t": 91513.5847031852,
+   "b": 296,
+   "bpm": 170,
+   "bt": [4, 4, 4, 4]
+  }
+ ]
+}

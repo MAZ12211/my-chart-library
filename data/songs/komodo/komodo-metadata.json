@@ -1,0 +1,33 @@
+{
+ "version": "2.2.4",
+ "songName": "Komodo",
+ "artist": "macaroom",
+ "charter": "MAZ",
+ "offsets": {
+  "instrumental": 0.063
+ },
+ "playData": {
+  "album": "unknown",
+  "difficulties": ["hard"],
+  "characters": {
+   "player": "",
+   "girlfriend": "",
+   "opponent": ""
+  },
+  "stage": "veryEmptyStage",
+  "noteStyle": "funkin",
+  "ratings": {
+   "hard": 6
+  },
+  "previewEnd": 0
+ },
+ "generatedBy": "Friday Night Funkin' - v0.8.4",
+ "timeChanges": [
+  {
+   "t": 0,
+   "b": 0,
+   "bpm": 180,
+   "bt": [4, 4, 4, 4]
+  }
+ ]
+}

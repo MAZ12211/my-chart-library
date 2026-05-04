@@ -4,5 +4,6 @@
   "artists": ["OR3O"],
   "albumArtAsset": "freeplay/albumRoll/cl-random-songs/clover-help-me",
   "albumTitleAsset": "freeplay/albumRoll/cl-random-songs/clover-text",
+  "albumOSTName": "CLOVER",
   "albumTitleOffsets": [35, 0]
 }

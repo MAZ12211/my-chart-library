@@ -4,5 +4,6 @@
   "artists": ["Odd"],
   "albumArtAsset": "freeplay/albumRoll/cl-random-songs-vol2/crystalloid",
   "albumTitleAsset": "freeplay/albumRoll/cl-random-songs-vol2/crystalloid-text",
+  "albumOSTName": "CRYSTALLOID",
   "albumTitleOffsets": [10, 0]
 }

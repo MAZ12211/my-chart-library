@@ -4,5 +4,6 @@
   "artists": ["Kinuyo Yamashita"],
   "albumArtAsset": "freeplay/albumRoll/cl-random-songs/castlevania-nes",
   "albumTitleAsset": "freeplay/albumRoll/cl-random-songs/castlevania-nes-text",
+  "albumOSTName": "CASTLEVANIA NES",
   "albumTitleOffsets": [-80, -80]
 }

@@ -3,7 +3,7 @@
   "name": "to-be-sorted",
   "titleAsset": "storymenu/titles/myweek",
   "background": "#F9CF51",
-  "songs": ["panic", "chaoz-impact", "motorzone", "graveyard", "self-aware"],
+  "songs": ["graveyard", "self-aware"],
   "visible": false,
   "props": [
     {

@@ -4,5 +4,6 @@
   "artists": ["Odd"],
   "albumArtAsset": "freeplay/albumRoll/cl-random-songs-vol3/furi-demake-the-chain",
   "albumTitleAsset": "freeplay/albumRoll/cl-random-songs-vol3/furi-demake-the-chain-text",
+  "albumOSTName": "FURI DEMAKE THE CHAIN",
   "albumTitleOffsets": [-30, 0]
 }

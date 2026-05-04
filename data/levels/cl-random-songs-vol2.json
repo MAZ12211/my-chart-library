@@ -1,6 +1,10 @@
 {
   "version": "1.0.0",
-  "name": "2nd folder of old charts.",
+  "name": "Random Charts Made In 2022",
+  "capsule": {
+    "name": "2022 Charts",
+    "offsets": [5, 0]
+  },
   "titleAsset": "storymenu/titles/cl-random-songs-vol2",
   "background": "#F9CF51",
   "songs": ["avgn-theme-thrash-metal-short-ver", "boku-boku-feat-hatsune-miku", "cl-burning-in-hell-old", "cl-despair-old", "good-morning-hqsg", "lace-hollow-knight-silksong", "soulless-fanmade", "cl-glory", "cl-requiem-calm"],

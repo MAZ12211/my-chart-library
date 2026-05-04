@@ -1,6 +1,10 @@
 {
   "version": "1.0.0",
   "name": "hypnospace-highlights",
+  "capsule": {
+    "name": "HS Highlights",
+    "offsets": [15, 0]
+  },
   "titleAsset": "storymenu/titles/myweek",
   "background": "#F9CF51",
   "songs": ["hypnospace-is-cool", "the-swatter-song"],

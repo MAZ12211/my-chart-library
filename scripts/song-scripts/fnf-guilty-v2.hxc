@@ -112,10 +112,7 @@ class CL_Guilty_V2 extends Song {
                 FunkinSound.playOnce(Paths.sound("chartingSounds/openWindow"));
                 FlxTween.tween(PlayState.instance, {hudCameraZoomIntensity: 0, cameraBopMultiplier: 1.0, cameraBopIntensity: 1.0}, 5);
                 myText.text = "Andddd that's all I've charted for this song.";
-                new FlxTimer().start(endTimer, function(timer) {
-                    PlayState.instance.endSong(true);
-                });
-                FlxG.sound.music?.fadeOut(2, 0);
+                ModuleHandler.getModule("cl_handler")?.scriptCall("startTransTimer", [endTimer, 2]);
 
             case 1050:
                 FunkinSound.playOnce(Paths.sound("chartingSounds/exitWindow"));

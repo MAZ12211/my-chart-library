@@ -8,13 +8,13 @@
 		"vocals": {}
 	},
 	"playData": {
-		"ratings": {"normal": 10},
+		"ratings": {"hard": 10},
 		"album": "sundome",
 		"stage": "veryEmptyStage",
 		"songVariations": [],
 		"noteStyle": "funkin",
 		"difficulties": [
-			"normal"
+			"hard"
 		],
 		"characters": {
 			"girlfriend": "",

@@ -1,0 +1,29 @@
+import funkin.modding.module.Module;
+import flixel.FlxG;
+import funkin.ui.story.StoryMenuState;
+
+
+class CL_ForceNormInStoryMenu extends Module {
+    function new() {
+        super("cl_forceNormInStoryMenu", 100, {state: StoryMenuState});
+    }
+
+    override function onUpdate(e) {
+        super.onUpdate(e);
+        var state = FlxG.state;
+        if (!(state is StoryMenuState)) return;
+
+        switch (state.currentLevelId) {
+            case "my-secret-santa-submissions":
+                state.levelTitleText?.size = 24;
+                state.tracklistText?.size = 24;
+                state.tracklistText?.x = 10;
+            case "cl-random-songs", "cl-random-songs-vol2", "cl-random-songs-vol3":
+                state.levelTitleText?.size = 32;
+                state.tracklistText?.size = 10;
+            default:
+                state.levelTitleText?.size = 32;
+                state.tracklistText?.size = 32;
+        }
+    }
+}

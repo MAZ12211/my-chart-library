@@ -9,6 +9,7 @@ import flixel.text.FlxTextBorderStyle;
 import funkin.Paths;
 import flixel.util.FlxTimer;
 import funkin.play.PlayStatePlaylist;
+import funkin.modding.module.ModuleHandler;
 
 class CL_PorkrindShop extends Song {
     function new() {
@@ -35,10 +36,9 @@ class CL_PorkrindShop extends Song {
         super.onBeatHit(e);
         switch (e.beat) {
             case 60:
-                FlxTween.tween(myText, {alpha: 1}, 2, {onComplete: new FlxTimer().start(endTimer, function(timer) {
-                    PlayState.instance.endSong(true);
-                })});
-                FlxG.sound.music?.fadeOut(10, 0);
+                FlxTween.tween(myText, {alpha: 1}, 2, {onComplete: function() {
+                    ModuleHandler.getModule("cl_handler")?.scriptCall("startTransTimer", [endTimer, 10]);
+                }});
         }
     }
 }

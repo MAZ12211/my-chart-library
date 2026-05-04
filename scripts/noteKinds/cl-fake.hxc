@@ -1,0 +1,33 @@
+import funkin.play.notes.notekind.ScriptedNoteKind;
+import funkin.data.song.NoteParamData;
+import funkin.play.PlayState;
+import funkin.util.Constants;
+import funkin.util.GRhythmUtil;
+import funkin.input.PreciseInputManager;
+import funkin.PlayerSettings;
+import funkin.Conductor;
+import funkin.audio.FunkinSound;
+import funkin.modding.module.Module;
+
+class ChartLibraryFake extends ScriptedNoteKind {
+    function new() {
+        super("cl-fake", "My Chart Library | Fake", "cl-fake");
+        scoreable = false;
+    }
+
+    override function onNoteHit(e) {
+        e.cancel();
+        e.note.desaturate();
+        e.note.alpha = 0.5;
+    }
+    
+    override function onNoteMiss(e) {
+        e.cancel();
+        e.note.visible = false;
+    }
+
+    override function onNoteIncoming(e) {
+        super.onNoteIncoming();
+        if (PlayState.instance.isBotPlayMode) e.note.hasMissed = true;
+    }
+}

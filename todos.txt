@@ -1,1 +1,10 @@
-import the rest of eterna's secret santa charts
+playtest the whole thing
+record the whole thing...
+
+Apply commentaries for all songs starting from sanguine
+album for graveyard (yes, we're releasing everything)
+
+This thing is nearing 200 MBs, multiple releases/builds may be neccessary if I'm porting from other mods for the remaining charts
+The plan atm
+- one for step mania charts (has all of the charts that are outside of FNF, i.e. etterna)
+- one for FNF charts (contains all of my FNF charts, from canceled mods to charts made for fanmade ports)

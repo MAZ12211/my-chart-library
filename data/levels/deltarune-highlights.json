@@ -1,6 +1,10 @@
 {
   "version": "1.0.0",
   "name": "deltarune-highlights",
+  "capsule": {
+    "name": "DR Highlights",
+    "offsets": [15, 0]
+  },
   "titleAsset": "storymenu/titles/deltarune-highlights",
   "background": "#F9CF51",
   "songs": ["glacier", "battle-vapor"],

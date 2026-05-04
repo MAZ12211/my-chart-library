@@ -4,5 +4,6 @@
   "artists": ["Multiple"],
   "albumArtAsset": "freeplay/albumRoll/dance/funkin-sound-project4",
   "albumTitleAsset": "freeplay/albumRoll/dance/funkin-sound-project4-text",
+  "albumOSTName": "Funkin' Sound Project Vol. 4",
   "albumTitleOffsets": [-40, 0]
 }
